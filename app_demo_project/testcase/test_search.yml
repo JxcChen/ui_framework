@@ -1,0 +1,16 @@
+set_up_class:
+  - main_page.into_shares_page: {}
+
+set_up:
+  - shares_page.back: {}
+
+test_01:
+  - data:
+      key: ['阿里巴巴','腾讯']
+  - shares_page.search: {key: $key}
+  - shares_page.get_search_result: {}
+  - validate:
+    - in: [$key,'$search_elements']
+
+test_02:
+  - print: test02

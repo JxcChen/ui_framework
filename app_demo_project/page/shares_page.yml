@@ -1,0 +1,15 @@
+shares_page:
+  actions:
+    search:
+      - find: ['id','action_search']
+      - click: ()
+      - find: ['xpath','//*[@resource-id="com.xueqiu.android:id/search_input_text"]']
+      - send: $key
+
+    get_search_result:
+      - find_elements: ['id','name']
+      - get_elements_text: []
+      - save: search_elements
+
+    back:
+      - back: ['xpath','//*[@text="自选股"]']
