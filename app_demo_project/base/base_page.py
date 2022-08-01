@@ -4,8 +4,8 @@
 # @File     :base_page.py
 # @Desc     :page基类
 import datetime
-import json
 import os
+from logging import Logger
 
 import allure
 import yaml
@@ -15,18 +15,20 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from base.handle_exception import handle_exception
+from app_demo_project.base.handle_exception import handle_exception
+from app_demo_project.project_logger import ProjectLogger
 
 
 class BasePage:
     _element: WebElement = None
-    current_time = 0
     _elements: list[WebElement] = None
+    current_time = 0
     caps = {}
 
     def __init__(self, driver: WebDriver = None):
-        from base.app import App
-        from base.web import Web
+        self.logger = ProjectLogger().get_logger()
+        from app_demo_project.base.app import App
+        from app_demo_project.base.web import Web
         if driver is None:
             if self.__class__.__base__ is App:
                 self.init_app()
@@ -56,7 +58,7 @@ class BasePage:
         self.caps = cap_conf['capability']
         self.driver = webdriver.Remote(f"{cap_conf['server']['host']}:{cap_conf['server']['port']}/wd/hub", self.caps)
 
-    # @handle_exception
+    @handle_exception
     def find_element(self, by, locator: str = None) -> WebElement:
         """
         查找元素
@@ -64,15 +66,18 @@ class BasePage:
         :param locator: 定位符 默认为空  如果不传 by必须传元祖
         :return: 目标元素
         """
+        self.logger.info(f'查找元素 by：{by},locator:{locator}')
         if locator is None:
             self._element = self.driver.find_element(*by)
         else:
             self._element = self.driver.find_element(by, locator)
+        return self._element
 
     def click(self):
         """
         点击元素  需要先查找
         """
+        self.logger.info('点击元素')
         self._element.click()
         return self
 
@@ -80,6 +85,7 @@ class BasePage:
         """
         点击元素  需要先查找
         """
+        self.logger.info(f'输入 key： {key}')
         self._element.send_keys(key)
         return self
 
@@ -88,6 +94,7 @@ class BasePage:
         点击元素
         return 当前页面
         """
+        self.logger.info(f'查找并点击元素 by：{by} locator:{locator}')
         self.find_element(by, locator)
         return self.click()
 
@@ -96,13 +103,16 @@ class BasePage:
         点击元素
         return 当前页面
         """
+        self.logger.info(f'查找并输入内容 by：{by} locator:{locator} key:{key}')
         self.find_element(by, locator)
         return self.send(key)
 
+    @handle_exception
     def find_elements(self, by, locator: str = None, index: int = None):
         """
         查找全部相关元素
         """
+        self.logger.info(f'查找全部相关元素 by：{by} locator:{locator} 第{index}个')
         if index is None:
             if locator is None:
                 self._elements = self.driver.find_elements(*by)
@@ -115,32 +125,42 @@ class BasePage:
                 self._element = self.driver.find_elements(by, locator)[index]
             return self._element
 
-    def get_elements_text(self):
+    def get_elements_text(self) -> list:
+        """
+        获取元素的文本属性列表
+        """
+        self.logger.info(f'获取元素的文本属性列表')
         if self._elements is not None:
             return [ele.text for ele in self._elements]
         else:
-            return
+            return []
 
-    def get_element_text(self):
+    def get_element_text(self) -> str:
+        """
+        获取元素的文本属性
+        """
+        self.logger.info(f'获取元素的文本属性')
         return self._element.text
 
-    def wait_for_click(self, locator, timeout=10):
+    def wait_for_click(self, locator, timeout=15):
         """
         等待元素可被点击
         :param locator: 定位符
         :param timeout: 超时时间 默认10秒
         :return: self
         """
+        self.logger.info(f'等待元素可被点击 locator：{locator} timeout：{timeout}')
         self._element = WebDriverWait(self.driver, timeout).until(expected_conditions.element_to_be_clickable(locator))
         return self
 
     def wait_for_visible(self, locator, timeout=10):
         """
-        等待元素可被点击
+        等待元素可见
         :param locator: 定位符
         :param timeout: 超时时间 默认10秒
         :return: self
         """
+        self.logger.info(f'等待元素可见 locator：{locator} timeout：{timeout}')
         self._element = WebDriverWait(self.driver, timeout).until(
             expected_conditions.visibility_of_element_located(locator))
         return self
@@ -157,6 +177,7 @@ class BasePage:
         if png_dir is None:
             png_dir = './image'
         png_path = png_dir + '/' + name + '.png'
+        self.logger.info(f'进行截图 name：{name} png_dir：{png_dir}')
         self.driver.save_screenshot(png_path)
         # 将截图放到allure中
         with open(png_path, 'rb') as f:

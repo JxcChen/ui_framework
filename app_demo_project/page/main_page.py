@@ -5,12 +5,12 @@
 # @Desc     :app主页
 from selenium.webdriver.common.by import By
 
+from app_demo_project import project_logger
 from app_demo_project.page.shares_page import SharesPage
-from base.app import App
+from app_demo_project.base import App
 
 
 class MainPage(App):
-
     def into_shares_page(self):
         """
         进入股票页面

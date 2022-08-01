@@ -4,7 +4,7 @@ shares_page:
       - find: ['id','action_search']
       - click: ()
       - find: ['xpath','//*[@resource-id="com.xueqiu.android:id/search_input_text"]']
-      - send: $key
+      - send: ${key}
 
     get_search_result:
       - find_elements: ['id','name']

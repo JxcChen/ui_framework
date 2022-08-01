@@ -8,8 +8,8 @@ import time
 
 import yaml
 
-from base.web import Web
-from base import global_val
+from app_demo_project.base import Web
+from app_demo_project.base import global_val
 
 
 class PageGenerate(Web):

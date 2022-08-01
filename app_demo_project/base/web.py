@@ -3,9 +3,8 @@
 # @Author   :CHNJX
 # @File     :web.py
 # @Desc     :web基类
-import os
 
-from base.base_page import BasePage
+from app_demo_project.base.base_page import BasePage
 
 
 class Web(BasePage):

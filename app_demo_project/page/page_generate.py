@@ -9,18 +9,22 @@ import time
 
 import yaml
 
-from base.app import App
-from base import global_val
-from base.utils import replace_form_2_actual
+from app_demo_project import project_logger
+from app_demo_project.base import App
+from app_demo_project.base import global_val
+from app_demo_project.base import Utils
 
 
 class PageGenerate(App):
     page_list = {}
-    logging.basicConfig(level=logging.DEBUG,
-                        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
     res = None
 
-    def generate_page(self, page_name: str):
+    def generate_page(self, page_name: str) -> dict:
+        """
+        读取文件并将页面和页面对应的方法进行储存 并范围对应的方法
+        :param page_name: 页面名称
+        :return:
+        """
         # 获取yaml中的页面并进行储存
         if not self.page_list.get(page_name):
             with open(f'{os.path.dirname(__file__)}/{page_name}.yml', encoding='utf-8') as page:
@@ -33,7 +37,12 @@ class PageGenerate(App):
                         self.driver.get(init_step['get'])
         return self.page_list.get(page_name)['actions']
 
-    def run_action(self, page_name, action_name: str):
+    def run_action(self, page_name:str, action_name: str):
+        """
+        执行页面对应的方法
+        :param page_name:   页面名称
+        :param action_name: 页面方法
+        """
         # 先对页面进行转换
         actions = self.generate_page(page_name)
         if not actions.get(action_name):
@@ -45,7 +54,7 @@ class PageGenerate(App):
                     self.find_element(value[0], value[1])
                 elif key == 'send':
                     if '$' in str(value):
-                        run_value = replace_form_2_actual(value,global_val.val_list)
+                        run_value = Utils.replace_form_2_actual(value, global_val.val_list)
                     else:
                         run_value = value
                     self.send(run_value)
@@ -58,7 +67,7 @@ class PageGenerate(App):
                         pass
                 elif key == 'find_elements':
                     if len(value) == 3:
-                        self.find_elements(value[0], value[1],value[2])
+                        self.find_elements(value[0], value[1], value[2])
                     else:
                         self.find_elements(value[0], value[1])
                 elif key == 'get_elements_text':
@@ -71,8 +80,3 @@ class PageGenerate(App):
                     time.sleep(value)
                 elif key == 'back':
                     self.back_to_main(value[0], value[1])
-
-
-
-
-

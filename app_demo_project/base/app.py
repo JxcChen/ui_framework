@@ -6,9 +6,7 @@
 import logging
 import subprocess
 
-from appium import webdriver
-
-from base.base_page import BasePage
+from app_demo_project.base.base_page import BasePage
 
 
 def back_handle(func):

@@ -3,11 +3,10 @@
 # @Author   :CHNJX
 # @File     :testcase_object.py
 # @Desc     :测试用例的实体类
-import importlib
 
 from app_demo_project.page.page_generate import PageGenerate
-from base import global_val
-from base.utils import replace_form_2_actual
+from app_demo_project.base import global_val
+from app_demo_project.base.utils import Utils
 
 
 class Testcase:
@@ -29,7 +28,7 @@ class Testcase:
             if self.run_set_up_class_time == 0:
                 # 确保只运行一次
                 for set_up_class_step in self.set_up_class:
-                    run_steps(set_up_class_step)
+                    self.run_steps(set_up_class_step)
                 self.run_set_up_class_time += 1
         if self.set_up:
             for set_up_step in self.set_up:
@@ -63,7 +62,7 @@ class Testcase:
                             expect_value = assert_value[0]
                             run_value = assert_value[1]
                             if '$' in run_value:
-                                run_value = replace_form_2_actual(run_value, global_val.save_list)
+                                run_value = Utils.replace_form_2_actual(run_value, global_val.save_list)
                             if assert_method == 'in':
                                 if type(run_value) is list:
                                     assert expect_value in run_value

@@ -5,9 +5,9 @@
 # @Desc     :股票页面
 from selenium.webdriver.common.by import By
 
-from base.app import App
+from app_demo_project.base import App
 
 
 class SharesPage(App):
-    def search(self,key):
-        self.find_and_click((By.ID,'action_search')).find_and_send(key,By.ID,'search_input_text')
+    def search(self, key):
+        self.find_and_click((By.ID, 'action_search')).find_and_send(key, By.ID, 'search_input_text')
