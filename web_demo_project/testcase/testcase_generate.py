@@ -7,7 +7,8 @@ import os
 
 import yaml
 
-from app_demo_project.base import Testcase
+from web_demo_project.base import global_val
+from web_demo_project.testcase.testcase_object import Testcase
 
 
 class TestcaseGenerate:
@@ -25,6 +26,8 @@ class TestcaseGenerate:
         for (title, steps) in self.data.items():
             if title == 'set_up':
                 self.testcase.set_up.append(steps)
+            elif title == 'data':
+                self.testcase.data = steps
             elif title == 'set_up_class':
                 self.testcase.set_up_class.append(steps)
             if title == 'teardown':
@@ -33,9 +36,18 @@ class TestcaseGenerate:
                 self.testcase.teardown_class.append(steps)
             elif str(title).startswith('test'):
                 self.testcase.ids.append(title)
-                self.testcase.steps_list.append(steps)
+                self.testcase.steps_list.append({title: steps})
 
-    def run_case(self, test_steps: list):
+    def run_case(self, test_steps: dict):
+        # # current_index = 0
+        # for (i,v) in test_steps:
+        #     if self.testcase.data.get(i):
+        #         data_dict:dict = self.testcase.data.data[i]
+        #         keys = data_dict.keys()
+        #         data_len = len(data_dict.values()[0])
+        #         for key in keys
+        #         for items in self.testcase.data.data[i].items():
+        #             items.
+        #             for index in range(len(param_values)):
+        #                 global_val.actual_list['param_key'] = param_values[index]
         self.testcase.run(test_steps)
-
-

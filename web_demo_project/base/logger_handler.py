@@ -14,7 +14,7 @@ class LoggerHandler:
     workdir = os.path.split(os.path.realpath(__file__))[0]
 
     @classmethod
-    def getLogger(cls, name, package_name,log_level='debug'):
+    def get_logger(cls, name, package_name, log_level='debug'):
         """
         获取日志控制器
         :param name: 日至控制器名称
@@ -32,7 +32,7 @@ class LoggerHandler:
         now_string = time.strftime(time_format, time.localtime(time.time()))
         file_name = 'log_{}.log'.format(now_string)
         root_path = os.path.abspath(
-            os.path.join(cls.workdir, "../../logs"))
+            os.path.join(cls.workdir, "../logs"))
         _folder_path = os.path.join(root_path, package_name)
         if not os.path.exists(_folder_path):
             os.mkdir(_folder_path)
@@ -55,7 +55,7 @@ class LoggerHandler:
         sh.setFormatter(formatter)
         sh.setLevel(logging.DEBUG)
         logger.addHandler(fh)
-        logger.addHandler(sh)
+        # logger.addHandler(sh)
         # logger.addHandler(uh)
 
         return logger

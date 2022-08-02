@@ -4,7 +4,7 @@
 # @File     :testcase_object.py
 # @Desc     :测试用例的实体类
 
-from app_demo_project.page.page_generate import PageGenerate
+from app_demo_project.page.app_page_generate import PageGenerate
 from app_demo_project.base import global_val
 from app_demo_project.base.utils import Utils
 

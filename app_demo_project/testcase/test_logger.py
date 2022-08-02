@@ -5,7 +5,7 @@
 # @Desc     :測試日志
 from app_demo_project.base import LoggerHandler
 
-logger = LoggerHandler.getLogger('testcase', 'app_demo_log')
+logger = LoggerHandler.get_logger('testcase', 'app_demo_log')
 
 
 def test_logger():

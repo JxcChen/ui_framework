@@ -6,9 +6,8 @@
 import os
 
 import pytest
-import yaml
 
-from app_demo_project.testcase.testcase_generate import TestcaseGenerate
+from web_demo_project.testcase.testcase_generate import TestcaseGenerate
 
 steps = {}
 

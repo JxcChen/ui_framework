@@ -1,5 +1,10 @@
+
+data:
+  test_search:
+    key: ['selenium','appium']
+
 test_search:
-  - main_page.search_keyword: {key: 'selenium'}
+  - main_page.search_keyword: {key: '${key}'}
   - search_page.get_search_result_list: {}
   - validate:
-      - in: [selenium,${search_elements}]
+      - in: [selenium,'${search_elements}']

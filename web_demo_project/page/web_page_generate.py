@@ -1,7 +1,6 @@
-# -*- coding:utf-8 -*-
 # @Time     :2022/7/30 5:22 下午
 # @Author   :CHNJX
-# @File     :page_generate.py
+# @File     :app_page_generate.py
 # @Desc     :将yaml转换成页面
 import logging
 import os
@@ -9,22 +8,18 @@ import time
 
 import yaml
 
-from app_demo_project import project_logger
-from app_demo_project.base.app import App
-from app_demo_project.base import global_val
-from app_demo_project.base.utils import Utils
+from web_demo_project.testcase.utils import Utils
+from web_demo_project.base.web import Web
+from web_demo_project.base import global_val
 
 
-class PageGenerate(App):
+class PageGenerate(Web):
     page_list = {}
+    logging.basicConfig(level=logging.DEBUG,
+                        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
     res = None
 
-    def generate_page(self, page_name: str) -> dict:
-        """
-        读取文件并将页面和页面对应的方法进行储存 并范围对应的方法
-        :param page_name: 页面名称
-        :return:
-        """
+    def generate_page(self, page_name: str):
         # 获取yaml中的页面并进行储存
         if not self.page_list.get(page_name):
             with open(f'{os.path.dirname(__file__)}/{page_name}.yml', encoding='utf-8') as page:
@@ -37,12 +32,7 @@ class PageGenerate(App):
                         self.driver.get(init_step['get'])
         return self.page_list.get(page_name)['actions']
 
-    def run_action(self, page_name:str, action_name: str):
-        """
-        执行页面对应的方法
-        :param page_name:   页面名称
-        :param action_name: 页面方法
-        """
+    def run_action(self, page_name, action_name: str):
         # 先对页面进行转换
         actions = self.generate_page(page_name)
         if not actions.get(action_name):
@@ -78,5 +68,3 @@ class PageGenerate(App):
                     global_val.save_list[value] = self.res
                 elif key == 'sleep':
                     time.sleep(value)
-                elif key == 'back':
-                    self.back_to_main(value[0], value[1])

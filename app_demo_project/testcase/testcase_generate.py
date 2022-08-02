@@ -7,7 +7,7 @@ import os
 
 import yaml
 
-from web_demo_project.base.testcase_object import Testcase
+from web_demo_project.testcase.testcase_object import Testcase
 
 
 class TestcaseGenerate:

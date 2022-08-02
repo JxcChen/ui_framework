@@ -4,9 +4,9 @@
 # @File     :testcase_object.py
 # @Desc     :测试用例的实体类
 
-from web_demo_project.page.page_generate import PageGenerate
+from web_demo_project.page.web_page_generate import PageGenerate
 from web_demo_project.base import global_val
-from web_demo_project.base.utils import Utils
+from web_demo_project.testcase.utils import Utils
 
 
 class Testcase:
@@ -17,7 +17,7 @@ class Testcase:
         self.set_up = []
         self.ids = []
         self.steps_list = []
-        self.data = []
+        self.data = {}
         self.teardown = []
         self.teardown_class = []
 
@@ -35,22 +35,19 @@ class Testcase:
                 self.run_steps(set_up_step)
         self.run_steps(test_steps)
 
-    def run_steps(self,steps: list[dict]):
+    def run_steps(self, steps: list[dict]):
         """
         执行测试步骤
-        :param steps:
+        :param steps: 步骤
         :return:
         """
+        pg = PageGenerate()
         for step in steps:
             for (k, v) in step.items():
                 k: str
-                if k == 'data':
-                    for (param_key,param_val) in v:
-                        self.data[param_key] = param_val
-                elif k == 'print':
+                if k == 'print':
                     print(v)
                 elif '.' in k:
-                    pg = PageGenerate()
                     page_method = k.split('.')
                     if v:
                         global_val.val_list.update(v)
@@ -71,3 +68,8 @@ class Testcase:
                             elif assert_method == 'equals':
                                 assert expect_value == run_value
 
+    # def data_driver_test(self, func):
+    #     if self.data:
+    #         for i in range(len(self.data)):
+    #             def ddt(*args, **kwargs):
+    #                 func(*args, **kwargs)

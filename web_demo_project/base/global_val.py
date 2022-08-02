@@ -6,3 +6,4 @@
 
 val_list = {}
 save_list = {}
+actual_list = {}
