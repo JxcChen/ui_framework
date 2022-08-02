@@ -12,9 +12,7 @@ from web_demo_project.page.search_page import SearchPage
 
 INDEX_URL = "https://www.baidu.com"
 
-from app_demo_project.base import Web
-
-
+from web_demo_project.base.web import Web
 
 
 class MainPage(Web):
@@ -31,4 +29,3 @@ class MainPage(Web):
         self.find_and_send(kw, By.ID, 'kw').wait_for_click((By.ID, 'su')).click()
         time.sleep(2)
         return SearchPage(self.driver)
-

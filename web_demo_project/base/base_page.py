@@ -5,7 +5,6 @@
 # @Desc     :page基类
 import datetime
 import os
-from logging import Logger
 
 import allure
 import yaml

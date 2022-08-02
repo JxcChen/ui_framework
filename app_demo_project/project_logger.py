@@ -5,7 +5,7 @@
 # @Desc     :获取日志控制器  单利模式
 from logging import Logger
 
-from app_demo_project.base import LoggerHandler
+from app_demo_project.base.logger_handler import LoggerHandler
 
 
 def singleton(cls):

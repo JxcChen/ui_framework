@@ -7,7 +7,7 @@ import os
 
 import yaml
 
-from web_demo_project.base.testcase_object import Testcase
+from app_demo_project.base import Testcase
 
 
 class TestcaseGenerate:
@@ -17,7 +17,7 @@ class TestcaseGenerate:
         self.data = None
 
     def load_case(self, file_path):
-        with open(os.path.dirname(__file__) + '/' + file_path,'rb',encoding='utf-8') as f:
+        with open(os.path.dirname(__file__) + '/' + file_path) as f:
             self.data = yaml.safe_load(f)
         self.generate()
 

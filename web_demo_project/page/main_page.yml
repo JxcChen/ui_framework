@@ -4,7 +4,7 @@ main_page:
   actions:
     search_keyword:
       - find: ['id','kw']
-      - send: selenium
+      - send: ${key}
       - find: [id,su]
       - click: ()
       - return: search_page

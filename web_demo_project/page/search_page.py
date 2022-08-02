@@ -5,7 +5,7 @@
 # @Desc     :搜索后的结果页面
 from selenium.webdriver.common.by import By
 
-from app_demo_project.base import Web
+from web_demo_project.base.web import Web
 
 
 class SearchPage(Web):

@@ -1,0 +1,5 @@
+test_search:
+  - main_page.search_keyword: {key: 'selenium'}
+  - search_page.get_search_result_list: {}
+  - validate:
+      - in: [selenium,${search_elements}]
