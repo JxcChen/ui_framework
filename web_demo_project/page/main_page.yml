@@ -1,7 +1,7 @@
 main_page:
-  init:
-    - get: "https://www.baidu.com"
   actions:
+    init:
+      - get: "https://www.baidu.com"
     search_keyword:
       - find: ['id','kw']
       - send: ${key}

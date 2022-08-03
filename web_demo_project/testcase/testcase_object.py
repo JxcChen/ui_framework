@@ -50,7 +50,8 @@ class Testcase:
                 elif '.' in k:
                     page_method = k.split('.')
                     if v:
-                        global_val.val_list.update(v)
+                        run_value = Utils.resolve_dict(v,global_val.actual_list)
+                        global_val.val_list.update(run_value)
                     pg.run_action(page_method[0], page_method[1])
                 elif 'validate' in k:
                     # 进行断言处理
@@ -60,6 +61,8 @@ class Testcase:
                             run_value = assert_value[1]
                             if '$' in run_value:
                                 run_value = Utils.replace_form_2_actual(run_value, global_val.save_list)
+                            if '$' in expect_value:
+                                expect_value = Utils.replace_form_2_actual(expect_value, global_val.actual_list)
                             if assert_method == 'in':
                                 if type(run_value) is list:
                                     assert expect_value in run_value
@@ -68,8 +71,4 @@ class Testcase:
                             elif assert_method == 'equals':
                                 assert expect_value == run_value
 
-    # def data_driver_test(self, func):
-    #     if self.data:
-    #         for i in range(len(self.data)):
-    #             def ddt(*args, **kwargs):
-    #                 func(*args, **kwargs)
+

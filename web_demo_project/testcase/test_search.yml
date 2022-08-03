@@ -4,7 +4,8 @@ data:
     key: ['selenium','appium']
 
 test_search:
+  - main_page.init: {}
   - main_page.search_keyword: {key: '${key}'}
   - search_page.get_search_result_list: {}
   - validate:
-      - in: [selenium,'${search_elements}']
+      - in: ['${key}','${search_elements}']

@@ -21,5 +21,5 @@ class TestCase:
         tg.testcase.steps_list,
         ids=tg.testcase.ids
     )
-    def test_param(self,testcase):
+    def test_param(self, testcase):
         self.tg.run_case(testcase)

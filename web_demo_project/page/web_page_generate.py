@@ -27,9 +27,10 @@ class PageGenerate(Web):
             for (key, value) in cur_page.items():
                 self.page_list[key] = value
                 # 打开首页
-                if value.get('init'):
-                    for init_step in value.get('init'):
-                        self.driver.get(init_step['get'])
+                # if value.get('init'):
+                #     for init_step in value.get('init'):
+                #         self.driver.get(init_step['get'])
+            # action = self.page_list.get(page_name)['actions']
         return self.page_list.get(page_name)['actions']
 
     def run_action(self, page_name, action_name: str):
@@ -40,6 +41,8 @@ class PageGenerate(Web):
             return
         for step in actions[action_name]:
             for (key, value) in step.items():
+                if key == 'get':
+                    self.driver.get(value)
                 if key == 'find':
                     self.find_element(value[0], value[1])
                 elif key == 'send':

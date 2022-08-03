@@ -55,3 +55,14 @@ class Utils:
             else:
                 start_index = -1
         return text
+
+    @classmethod
+    def resolve_dict(cls, dic: dict, parameter: dict):
+        """替换字典中值的占位符"""
+        if parameter is None or len(parameter) == 0 or dic is None or len(dic) == 0:
+            return dic
+        res = {}
+        for key, value in dic.items():
+            if cls.PLACEHOLDER_PREFIX in value:
+                res[key] = cls.replace_form_2_actual(value, parameter)
+        return res

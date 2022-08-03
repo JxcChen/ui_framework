@@ -7,6 +7,7 @@ import os
 
 import yaml
 
+from web_demo_project import project_logger
 from web_demo_project.base import global_val
 from web_demo_project.testcase.testcase_object import Testcase
 
@@ -16,6 +17,7 @@ class TestcaseGenerate:
     def __init__(self):
         self.testcase = Testcase()
         self.data = None
+        self.logger = project_logger.ProjectLogger().get_logger()
 
     def load_case(self, file_path):
         with open(os.path.dirname(__file__) + '/' + file_path) as f:
@@ -39,15 +41,21 @@ class TestcaseGenerate:
                 self.testcase.steps_list.append({title: steps})
 
     def run_case(self, test_steps: dict):
-        # # current_index = 0
-        # for (i,v) in test_steps:
-        #     if self.testcase.data.get(i):
-        #         data_dict:dict = self.testcase.data.data[i]
-        #         keys = data_dict.keys()
-        #         data_len = len(data_dict.values()[0])
-        #         for key in keys
-        #         for items in self.testcase.data.data[i].items():
-        #             items.
-        #             for index in range(len(param_values)):
-        #                 global_val.actual_list['param_key'] = param_values[index]
-        self.testcase.run(test_steps)
+        current_index = 0
+        val_len = None
+        for (i, v) in test_steps.items():
+            # 参数化驱动
+
+            if self.testcase.data.get(i):
+                data_dict: dict = self.testcase.data[i]
+                while val_len is None or current_index < val_len:
+                    for (keys, values) in data_dict.items():
+                        self.logger.info(f'测试用例 - {i}   当前参数：{values[current_index]}')
+                        val_len = len(values)
+                        if current_index < len(values):
+                            global_val.actual_list[keys] = values[current_index]
+
+                    current_index += 1
+                    self.testcase.run(v)
+            else:
+                self.testcase.run(v)
