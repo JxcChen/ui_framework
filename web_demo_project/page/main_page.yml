@@ -1,7 +1,11 @@
 main_page:
   actions:
     init:
-      - get: "https://www.baidu.com"
+      - get: "https://sa-test.gemdaletech.com/cloud/home"
+      - token_helper.get_token: ""
+      - save: token
+      - js_script: 'localStorage.setItem("cloudUser",\"${token}\")'
+      - refresh: ()
     search_keyword:
       - find: ['id','kw']
       - send: ${key}

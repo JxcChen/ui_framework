@@ -2,6 +2,7 @@
 # @Author   :CHNJX
 # @File     :app_page_generate.py
 # @Desc     :将yaml转换成页面
+import importlib
 import logging
 import os
 import time
@@ -71,3 +72,14 @@ class PageGenerate(Web):
                     global_val.save_list[value] = self.res
                 elif key == 'sleep':
                     time.sleep(value)
+                elif '.' in key:
+                    module_method = str(key).split('.')
+                    module = importlib.import_module(".token_helper")
+                    r = getattr(module, module_method[1])()
+                    if r is str:
+                        self.res = r
+                elif 'js' in key:
+                    run_value = Utils.replace_form_2_actual(value, global_val.save_list)
+                    self.driver.execute_script(run_value)
+                elif 'refresh' == key:
+                    self.driver.refresh()
