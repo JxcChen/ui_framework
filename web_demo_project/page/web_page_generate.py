@@ -1,6 +1,6 @@
 # @Time     :2022/7/30 5:22 下午
 # @Author   :CHNJX
-# @File     :app_page_generate.py
+# @File     :web_page_generate.py
 # @Desc     :将yaml转换成页面
 import importlib
 import logging
@@ -74,9 +74,12 @@ class PageGenerate(Web):
                     time.sleep(value)
                 elif '.' in key:
                     module_method = str(key).split('.')
-                    module = importlib.import_module(".token_helper")
+                    try:
+                        module = importlib.import_module("token_helper")
+                    except Exception as e:
+                        module = importlib.import_module("web_demo_project.token_helper")
                     r = getattr(module, module_method[1])()
-                    if r is str:
+                    if type(r) is str:
                         self.res = r
                 elif 'js' in key:
                     run_value = Utils.replace_form_2_actual(value, global_val.save_list)
