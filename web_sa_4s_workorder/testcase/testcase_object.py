@@ -3,10 +3,10 @@
 # @Author   :CHNJX
 # @File     :testcase_object.py
 # @Desc     :测试用例的实体类
-
-from web_demo_project.page.web_page_generate import PageGenerate
-from web_demo_project.base import global_val
-from web_demo_project.testcase.utils import Utils
+from web_sa_4s_workorder import project_logger
+from web_sa_4s_workorder.page.web_page_generate import PageGenerate
+from web_sa_4s_workorder.base import global_val
+from web_sa_4s_workorder.testcase.utils import Utils
 
 
 class Testcase:
@@ -20,6 +20,7 @@ class Testcase:
         self.data = {}
         self.teardown = []
         self.teardown_class = []
+        self.logger = project_logger.ProjectLogger().get_logger()
 
     def run(self, test_steps):
         """执行用例"""
@@ -57,16 +58,19 @@ class Testcase:
                     # 进行断言处理
                     for assert_content in v:
                         for (assert_method, assert_value) in assert_content.items():
+                            assert_method:str
                             expect_value = assert_value[0]
                             run_value = assert_value[1]
                             if '$' in run_value:
                                 run_value = Utils.replace_form_2_actual(run_value, global_val.save_list)
                             if '$' in expect_value:
                                 expect_value = Utils.replace_form_2_actual(expect_value, global_val.actual_list)
-                            if assert_method == 'in':
-                                if type(run_value) is list:
-                                    assert expect_value in run_value
-                                if type(run_value) is str:
+                            self.logger.info(f'进行断言 断言方式：{assert_method} 预期值：{expect_value} 实际值：{run_value}')
+                            if assert_method.startswith('in'):
+                                if assert_method.endswith('each') and type(run_value) is list:
+                                    for rv in run_value:
+                                        assert expect_value in rv
+                                else:
                                     assert expect_value in run_value
                             elif assert_method == 'equals':
                                 assert expect_value == run_value

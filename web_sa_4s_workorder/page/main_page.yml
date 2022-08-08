@@ -2,13 +2,11 @@ main_page:
   actions:
     init:
       - get: "https://sa-test.gemdaletech.com/cloud/home"
-      - token_helper.get_token: ""
+      - token_helper.get_token: {}
       - save: token
       - js_script: localStorage.setItem('cloudUser','${token}')
       - refresh: ()
-    search_keyword:
-      - find: ['id','kw']
-      - send: ${key}
-      - find: [id,su]
+    into_4s_page:
+      - find: ['xpath','//span[text()="四保"]']
       - click: ()
-      - return: search_page
+      - return: 4s_page

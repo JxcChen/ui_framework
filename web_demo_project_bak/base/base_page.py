@@ -4,6 +4,7 @@
 # @File     :base_page.py
 # @Desc     :page基类
 import datetime
+import logging
 import os
 
 import allure
@@ -14,8 +15,8 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from web_demo_project.base.handle_exception import handle_exception
-from web_demo_project.project_logger import ProjectLogger
+from web_sa_4s_workorder.base.handle_exception import handle_exception
+from web_sa_4s_workorder.project_logger import ProjectLogger
 
 
 class BasePage:
@@ -23,11 +24,12 @@ class BasePage:
     _elements: list[WebElement] = None
     current_time = 0
     caps = {}
+    logger: logging = None
 
     def __init__(self, driver: WebDriver = None):
         self.logger = ProjectLogger().get_logger()
-        from web_demo_project.base.app import App
-        from web_demo_project.base.web import Web
+        from web_sa_4s_workorder.base.app import App
+        from web_sa_4s_workorder.base.web import Web
         if driver is None:
             if self.__class__.__base__ is App:
                 self.init_app()
@@ -57,7 +59,6 @@ class BasePage:
         self.caps = cap_conf['capability']
         self.driver = webdriver.Remote(f"{cap_conf['server']['host']}:{cap_conf['server']['port']}/wd/hub", self.caps)
 
-    @handle_exception
     def find_element(self, by, locator: str = None) -> WebElement:
         """
         查找元素
@@ -66,10 +67,15 @@ class BasePage:
         :return: 目标元素
         """
         self.logger.info(f'查找元素 by：{by},locator:{locator}')
-        if locator is None:
-            self._element = self.driver.find_element(*by)
-        else:
-            self._element = self.driver.find_element(by, locator)
+        try:
+            if locator is None:
+                self._element = self.driver.find_element(*by)
+            else:
+                self._element = self.driver.find_element(by, locator)
+        except Exception as e:
+            self.logger.error(f'查找元素 by：{by} 失败,locator:{locator}')
+            self.logger.error(e.__str__())
+            raise e
         return self._element
 
     def click(self):
@@ -77,7 +83,12 @@ class BasePage:
         点击元素  需要先查找
         """
         self.logger.info('点击元素')
-        self._element.click()
+        try:
+            self._element.click()
+        except Exception as e:
+            self.logger.error('点击元素失败')
+            self.logger.error(e.__str__())
+            raise e
         return self
 
     def send(self, key):

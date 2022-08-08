@@ -1,0 +1,5 @@
+4s_page:
+  actions:
+    into_4s_workorder_page:
+      - click: ['xpath','//*[text()="作业工单"]']
+      - return: 4s_workorder_page

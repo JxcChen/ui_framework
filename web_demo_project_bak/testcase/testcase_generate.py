@@ -7,9 +7,9 @@ import os
 
 import yaml
 
-from web_demo_project import project_logger
-from web_demo_project.base import global_val
-from web_demo_project.testcase.testcase_object import Testcase
+from web_sa_4s_workorder import project_logger
+from web_sa_4s_workorder.base import global_val
+from web_sa_4s_workorder.testcase.testcase_object import Testcase
 
 
 class TestcaseGenerate:
@@ -20,7 +20,7 @@ class TestcaseGenerate:
         self.logger = project_logger.ProjectLogger().get_logger()
 
     def load_case(self, file_path):
-        with open(os.path.dirname(__file__) + '/' + file_path) as f:
+        with open(file_path) as f:
             self.data = yaml.safe_load(f)
         self.generate()
 
@@ -45,7 +45,6 @@ class TestcaseGenerate:
         val_len = None
         for (i, v) in test_steps.items():
             # 参数化驱动
-
             if self.testcase.data.get(i):
                 data_dict: dict = self.testcase.data[i]
                 while val_len is None or current_index < val_len:

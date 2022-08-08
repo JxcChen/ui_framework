@@ -1,0 +1,10 @@
+main_page:
+  actions:
+    init:
+      - get: "https://www.baidu.com"
+    search_keyword:
+      - find: ['id','kw']
+      - send: ${key}
+      - find: [id,su]
+      - click: ()
+      - return: search_page

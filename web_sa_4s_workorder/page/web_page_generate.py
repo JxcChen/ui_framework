@@ -1,7 +1,6 @@
-# -*- coding:utf-8 -*-
 # @Time     :2022/7/30 5:22 下午
 # @Author   :CHNJX
-# @File     :app_page_generate.py
+# @File     :web_page_generate.py
 # @Desc     :将yaml转换成页面
 import importlib
 import logging
@@ -10,22 +9,18 @@ import time
 
 import yaml
 
-from app_demo_project import project_logger
-from app_demo_project.base.app import App
-from app_demo_project.base import global_val
-from app_demo_project.base.utils import Utils
+from web_sa_4s_workorder.testcase.utils import Utils
+from web_sa_4s_workorder.base.web import Web
+from web_sa_4s_workorder.base import global_val
 
 
-class PageGenerate(App):
+class PageGenerate(Web):
     page_list = {}
+    logging.basicConfig(level=logging.DEBUG,
+                        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
     res = None
 
-    def generate_page(self, page_name: str) -> dict:
-        """
-        读取文件并将页面和页面对应的方法进行储存 并范围对应的方法
-        :param page_name: 页面名称
-        :return:
-        """
+    def generate_page(self, page_name: str):
         # 获取yaml中的页面并进行储存
         if not self.page_list.get(page_name):
             with open(f'{os.path.dirname(__file__)}/{page_name}.yml', encoding='utf-8') as page:
@@ -33,23 +28,26 @@ class PageGenerate(App):
             for (key, value) in cur_page.items():
                 self.page_list[key] = value
                 # 打开首页
-                if value.get('init'):
-                    for init_step in value.get('init'):
-                        self.driver.get(init_step['get'])
+                # if value.get('init'):
+                #     for init_step in value.get('init'):
+                #         self.driver.get(init_step['get'])
+            # action = self.page_list.get(page_name)['actions']
         return self.page_list.get(page_name)['actions']
 
-    def run_action(self, page_name:str, action_name: str):
-        """
-        执行页面对应的方法
-        :param page_name:   页面名称
-        :param action_name: 页面方法
-        """
+    def run_action(self, page_name, action_name: str):
         # 先对页面进行转换
         actions = self.generate_page(page_name)
         if not actions.get(action_name):
             logging.error('当前页面不存在' + action_name + '方法')
             return
-        for step in actions[action_name]:
+        self.run(actions[action_name])
+
+    def run(self, action):
+        """
+        执行具体的action步骤
+        :param action: 步骤列表  type：list[dict]
+        """
+        for step in action:
             for (key, value) in step.items():
                 key: str
                 run_value = value
@@ -117,5 +115,3 @@ class PageGenerate(App):
                 elif 'refresh' == key:
                     # 刷新页面
                     self.driver.refresh()
-                elif key == 'back':
-                    self.back_to_main(run_value[0], run_value[1])

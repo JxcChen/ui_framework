@@ -1,0 +1,39 @@
+4s_workorder_page:
+  actions:
+    search_workorder:
+      - if_project:
+        - find: ['css',"input[placeholder='请选择项目']"]
+        - click: ()
+        - find: ['xpath','//span[text()="${project}"]']
+        - click: ()
+        - find: ['xpath','//*[text()="确定"]']
+        - click: ()
+      - if_status:
+        - find: ['xpath','//*[@placeholder="请选择工单状态"]']
+        - click: ()
+        - find: ['xpath',"//li/span[text()='${status}']"]
+        - click: ()
+      - if_order_num:
+          - find: ['css','input[placeholder="输入工单编号"]']
+          - send: "${order_num}"
+      - if_trigger_type:
+          - find: ['css',"input[placeholder='请选择质检触发方式']"]
+          - click: ()
+          - find: [ 'xpath',"//span[text()='${trigger_type}']" ]
+      - if_workorder_type:
+          - find: [ 'css',"input[placeholder='请选择工单类型']" ]
+          - click: ()
+          - find: [ 'xpath',"//span[text()='${workorder_type}']" ]
+      - find: ['xpath','//span[text()="搜索"]']
+      - click: ()
+      - sleep: 1
+
+    get_search_res:
+      - find_elements: ['xpath','//tr[contains(@class,"el-table__row")]/td[6]'] # 项目列
+      - get_elements_text: ()
+      - save: search_project_result
+      - find_elements: [ 'xpath','//tr[contains(@class,"el-table__row")]/td[4]' ] # 状态列
+      - get_elements_text: ()
+      - save: search_status_result
+
+

@@ -6,7 +6,7 @@
 
 from selenium.webdriver.common.by import By
 
-from web_demo_project.project_logger import ProjectLogger
+from web_sa_4s_workorder.project_logger import ProjectLogger
 
 _black_list = [(By.XPATH, "//*[@resource-id='iv_close']"),
                (By.XPATH, "//*[text='下一步']"),

@@ -1,0 +1,14 @@
+data:
+  test_search:
+    project: [金地威新软件园,深圳金地物业]
+    status: [待指派,待处理]
+
+test_search:
+  - main_page.init: {}
+  - main_page.into_4s_page: {}
+  - 4s_page.into_4s_workorder_page: {}
+  - 4s_workorder_page.search_workorder: {project: '${project}',status: '${status}'}
+  - 4s_workorder_page.get_search_res: {}
+  - validate:
+      - in_each: ['${project}','${search_project_result}']
+      - in_each: ['${status}','${search_status_result}']

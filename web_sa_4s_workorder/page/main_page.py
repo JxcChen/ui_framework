@@ -8,11 +8,11 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
-from web_demo_project.page.search_page import SearchPage
+from web_sa_4s_workorder.page.search_page import SearchPage
 
-INDEX_URL = "https://www.baidu.com"
+INDEX_URL = "https://sa-test.gemdaletech.com/cloud/home"
 
-from web_demo_project.base.web import Web
+from web_sa_4s_workorder.base.web import Web
 
 
 class MainPage(Web):

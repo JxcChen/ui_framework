@@ -6,7 +6,7 @@
 import logging
 import subprocess
 
-from web_demo_project.base.base_page import BasePage
+from web_sa_4s_workorder.base.base_page import BasePage
 
 
 def back_handle(func):

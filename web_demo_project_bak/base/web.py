@@ -4,7 +4,7 @@
 # @File     :web.py
 # @Desc     :web基类
 
-from web_demo_project.base.base_page import BasePage
+from web_sa_4s_workorder.base.base_page import BasePage
 
 
 class Web(BasePage):

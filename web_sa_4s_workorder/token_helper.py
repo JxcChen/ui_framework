@@ -1,0 +1,8 @@
+# -*- coding:utf-8 -*-
+# @Time     :2022/8/4 8:29 下午
+# @Author   :CHNJX
+# @File     :token_helper.py
+# @Desc     :获取token
+
+def get_token():
+    return '{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRfaWQiOiIxNDcwNTYyMzQ3NDgwMzAxNTcwIiwiaXNfYWRtaW4iOjAsImF1ZCI6WyJzYS1iZmYtY2xvdWQiLCJzYS1iZmYtZWRnZSJdLCJ1c2VyX25hbWUiOiJjaGVuangiLCJzY29wZSI6WyJjbG91ZCJdLCJvcGVuX3VzZXJfaWQiOiJ3b2tCLThFUUFBM3JFNTg2MmNpTWN0RlNnSk5Ea0QydyIsImlkIjoiMTQ3MDU3NjE2MDU3NDcxNzk1NSIsImV4cCI6MTY1OTg3NTQyOCwiYXV0aF9jb3JwX2lkIjoid3cyYmQxMTAxMjc3MjgxNmZhIiwianRpIjoiMWRkZDdlYTUtMTIwZC00NzYxLWIzYzctYjg4OGIwOWE4ZWM3IiwiY2xpZW50X2lkIjoic2EtY2xvdWQifQ.fjLuxSdpUuOpKcfyWWLm6_Q7rMUv4fsaukPoo2qDZG0","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRfaWQiOiIxNDcwNTYyMzQ3NDgwMzAxNTcwIiwiaXNfYWRtaW4iOjAsImF1ZCI6WyJzYS1iZmYtY2xvdWQiLCJzYS1iZmYtZWRnZSJdLCJ1c2VyX25hbWUiOiJjaGVuangiLCJzY29wZSI6WyJjbG91ZCJdLCJhdGkiOiIxZGRkN2VhNS0xMjBkLTQ3NjEtYjNjNy1iODg4YjA5YThlYzciLCJvcGVuX3VzZXJfaWQiOiJ3b2tCLThFUUFBM3JFNTg2MmNpTWN0RlNnSk5Ea0QydyIsImlkIjoiMTQ3MDU3NjE2MDU3NDcxNzk1NSIsImV4cCI6MTY1OTg3OTAyOCwiYXV0aF9jb3JwX2lkIjoid3cyYmQxMTAxMjc3MjgxNmZhIiwianRpIjoiODRkMGY2MGEtN2NmZC00YTk1LWFjMzItYjc2OWQwYTFmYjI2IiwiY2xpZW50X2lkIjoic2EtY2xvdWQifQ.OPEBWV2LiR2YjEIGqVlUQfc_sI5H9D1A7clHoPOZ-5U","expires_in":17999,"scope":"cloud","jti":"1ddd7ea5-120d-4761-b3c7-b888b09a8ec7","code":0,"msg":"成功"}'

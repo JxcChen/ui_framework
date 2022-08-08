@@ -6,7 +6,6 @@
 import datetime
 import logging
 import os
-from logging import Logger
 
 import allure
 import yaml
@@ -16,8 +15,8 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from app_demo_project.base.handle_exception import handle_exception
-from app_demo_project.project_logger import ProjectLogger
+from web_sa_4s_workorder.base.handle_exception import handle_exception
+from web_sa_4s_workorder.project_logger import ProjectLogger
 
 
 class BasePage:
@@ -60,7 +59,6 @@ class BasePage:
         self.caps = cap_conf['capability']
         self.driver = webdriver.Remote(f"{cap_conf['server']['host']}:{cap_conf['server']['port']}/wd/hub", self.caps)
 
-    @handle_exception
     def find_element(self, by, locator: str = None) -> WebElement:
         """
         查找元素
@@ -69,10 +67,15 @@ class BasePage:
         :return: 目标元素
         """
         self.logger.info(f'查找元素 by：{by},locator:{locator}')
-        if locator is None:
-            self._element = self.driver.find_element(*by)
-        else:
-            self._element = self.driver.find_element(by, locator)
+        try:
+            if locator is None:
+                self._element = self.driver.find_element(*by)
+            else:
+                self._element = self.driver.find_element(by, locator)
+        except Exception as e:
+            self.logger.error(f'查找元素 by：{by} 失败,locator:{locator}')
+            self.logger.error(e.__str__())
+            raise e
         return self._element
 
     def click(self):

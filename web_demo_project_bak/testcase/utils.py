@@ -9,7 +9,7 @@ import os
 
 from jsonpath import jsonpath
 
-from web_demo_project.base.logger_handler import LoggerHandler
+from web_sa_4s_workorder.base.logger_handler import LoggerHandler
 
 
 class Utils:

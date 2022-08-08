@@ -7,14 +7,14 @@ import os
 
 import pytest
 
-from web_demo_project.testcase.testcase_generate import TestcaseGenerate
+from web_sa_4s_workorder.testcase.testcase_generate import TestcaseGenerate
 
 steps = {}
 
 
 class TestCase:
     tg = TestcaseGenerate()
-    tg.load_case(str(__name__).split('.')[-1] + '.yml')
+    tg.load_case(os.path.dirname(__file__)+'/'+str(__name__).split('.')[-1] + '.yml')
 
     @pytest.mark.parametrize(
         'testcase',
