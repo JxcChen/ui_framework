@@ -35,7 +35,7 @@ class BasePage:
                 self.init_app()
             elif self.__class__.__base__ is Web:
                 self.init_web()
-            self.driver.implicitly_wait(3)
+            self.driver.implicitly_wait(5)
         else:
             self.driver = driver
 
@@ -59,6 +59,7 @@ class BasePage:
         self.caps = cap_conf['capability']
         self.driver = webdriver.Remote(f"{cap_conf['server']['host']}:{cap_conf['server']['port']}/wd/hub", self.caps)
 
+    @handle_exception
     def find_element(self, by, locator: str = None) -> WebElement:
         """
         查找元素
@@ -75,6 +76,7 @@ class BasePage:
         except Exception as e:
             self.logger.error(f'查找元素 by：{by} 失败,locator:{locator}')
             self.logger.error(e.__str__())
+            self.logger.info('开始判断是否有存在黑名单元素')
             raise e
         return self._element
 
@@ -117,7 +119,6 @@ class BasePage:
         self.find_element(by, locator)
         return self.send(key)
 
-    @handle_exception
     def find_elements(self, by, locator: str = None, index: int = None):
         """
         查找全部相关元素

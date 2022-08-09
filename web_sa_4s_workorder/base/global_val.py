@@ -7,3 +7,9 @@
 val_list = {}
 save_list = {}
 actual_list = {}
+
+
+def clear_all_data():
+    val_list.clear()
+    save_list.clear()
+    actual_list.clear()

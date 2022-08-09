@@ -19,7 +19,7 @@ class ProjectLogger:
     def __init__(self):
         if not self._flag:
             self._flag = True
-            self._logger = LoggerHandler.get_logger('test', 'sa_4s_workorder.log', 'debug')
+            self._logger = LoggerHandler.get_logger('test', 'sa_4s_workorder_log', 'debug')
 
     def get_logger(self) -> object:
         return self._logger

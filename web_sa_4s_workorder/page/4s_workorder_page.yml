@@ -35,5 +35,8 @@
       - find_elements: [ 'xpath','//tr[contains(@class,"el-table__row")]/td[4]' ] # 状态列
       - get_elements_text: ()
       - save: search_status_result
+      - find_elements: [ 'xpath','//tr[contains(@class,"el-table__row")]/td[1]' ] # 状态列
+      - get_elements_text: ()
+      - save: search_order_num_result
 
 

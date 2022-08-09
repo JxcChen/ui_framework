@@ -5,11 +5,12 @@
 import importlib
 import logging
 import os
+import platform
 import time
 
 import yaml
 
-from web_sa_4s_workorder.testcase.utils import Utils
+from web_sa_4s_workorder.base.utils import Utils
 from web_sa_4s_workorder.base.web import Web
 from web_sa_4s_workorder.base import global_val
 
@@ -102,7 +103,12 @@ class PageGenerate(Web):
                     try:
                         module = importlib.import_module("token_helper")
                     except Exception as e:
-                        project_package = os.path.dirname(os.path.dirname(__file__)).split("/")[-1]
+                        ro_path = os.path.dirname(os.path.dirname(__file__))
+                        # 需要根据不同系统做不同操作
+                        if platform.system() == 'Windows':
+                            project_package = pro_path.split("\\")[-1]
+                        else:
+                            project_package = pro_path.split("/")[-1]
                         module = importlib.import_module(f"{project_package}.token_helper")
                     r = getattr(module, module_method[1])()
                     if type(r) is str:

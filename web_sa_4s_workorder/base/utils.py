@@ -9,14 +9,14 @@ import os
 
 from jsonpath import jsonpath
 
-from web_sa_4s_workorder.base.logger_handler import LoggerHandler
+from web_sa_4s_workorder import project_logger
 
 
 class Utils:
     workdir = os.path.split(os.path.realpath(__file__))[0]
     PLACEHOLDER_PREFIX = '${'
     PLACEHOLDER_SUFFIX = '}'
-    logger = LoggerHandler.get_logger("CHNJX", "demo")
+    logger = project_logger.ProjectLogger().get_logger()
 
     @classmethod
     def jsonpath(cls, json_object, expr):
@@ -52,10 +52,12 @@ class Utils:
                             text = actual
                             start_index = -1
                     else:
-                        cls.logger.info("Could not resolve placeholder '" + formal + "' in [" + text + "] ")
+                        cls.logger.error("Could not resolve placeholder '" + formal + "' in [" + text + "] ")
+                        start_index = -1
                 except Exception as e:
-                    cls.logger.info(
+                    cls.logger.error(
                         "Could not resolve placeholder '" + formal + "' in [" + text + "]: " + e.__str__())
+                    start_index = -1
 
             else:
                 start_index = -1
