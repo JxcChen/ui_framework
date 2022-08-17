@@ -22,7 +22,7 @@ class LoggerHandler:
         :param log_level: 日志收集等级 默认为debug
         """
         logger = logging.getLogger(name)
-        if logger:
+        if logger.handlers:
             return logger
         if log_level == 'debug':
             logger.setLevel(logging.DEBUG)

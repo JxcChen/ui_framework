@@ -24,7 +24,6 @@ class BasePage:
     _elements: list[WebElement] = None
     current_time = 0
     caps = {}
-    logger: logging = None
 
     def __init__(self, driver: WebDriver = None):
         self.logger = ProjectLogger().get_logger()
@@ -194,3 +193,14 @@ class BasePage:
         with open(png_path, 'rb') as f:
             allure.attach(f.read(), attachment_type=allure.attachment_type.PNG)
         return png_path
+
+    # ******************* web *************************
+    def scroll_to_bottom(self):
+        """
+        滑动到页面底部
+        """
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    # ******************* app *************************
+    # todo: app 滑动
+    # todo: app 双指操作

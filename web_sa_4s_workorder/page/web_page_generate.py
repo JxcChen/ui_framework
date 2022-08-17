@@ -17,8 +17,6 @@ from web_sa_4s_workorder.base import global_val
 
 class PageGenerate(Web):
     page_list = {}
-    logging.basicConfig(level=logging.DEBUG,
-                        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
     res = None
 
     def generate_page(self, page_name: str):
@@ -121,3 +119,9 @@ class PageGenerate(Web):
                 elif 'refresh' == key:
                     # 刷新页面
                     self.driver.refresh()
+                elif 'quit' == key or 'close' == key or 'teardown' == quit():
+                    # 刷新页面
+                    self.driver.close()
+                elif 'quit' == key or 'teardown' == quit():
+                    # 刷新页面
+                    self.driver.quit()

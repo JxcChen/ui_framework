@@ -21,7 +21,7 @@ def handle_exception(func):
     :param func: 需要被修饰的方法
     """
     def close_exception(*args, **kwargs):
-        from app_demo_project.base.base_page import BasePage
+        from web_sa_4s_workorder.base.base_page import BasePage
         # 获取实例  args[0] = self
         instance: BasePage = args[0]
         try:
