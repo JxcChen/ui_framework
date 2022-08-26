@@ -20,20 +20,23 @@ class PageGenerate(Web):
     res = None
 
     def generate_page(self, page_name: str):
-        # 获取yaml中的页面并进行储存
+        """
+        获取yaml中的页面并进行储存
+        :param page_name: 页面名称
+        """
         if not self.page_list.get(page_name):
             with open(f'{os.path.dirname(__file__)}/{page_name}.yml', encoding='utf-8') as page:
                 cur_page = yaml.safe_load(page)
             for (key, value) in cur_page.items():
                 self.page_list[key] = value
-                # 打开首页
-                # if value.get('init'):
-                #     for init_step in value.get('init'):
-                #         self.driver.get(init_step['get'])
-            # action = self.page_list.get(page_name)['actions']
         return self.page_list.get(page_name)['actions']
 
     def run_action(self, page_name, action_name: str):
+        """
+        调用对应页面方法方法
+        :param page_name: 页面名称
+        :param action_name: 方法名称
+        """
         # 先对页面进行转换
         actions = self.generate_page(page_name)
         if not actions.get(action_name):
@@ -41,7 +44,7 @@ class PageGenerate(Web):
             return
         self.run(actions[action_name])
 
-    def run(self, action):
+    def run(self, action: list[dict]):
         """
         执行具体的action步骤
         :param action: 步骤列表  type：list[dict]

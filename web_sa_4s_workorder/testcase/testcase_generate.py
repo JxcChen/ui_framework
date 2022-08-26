@@ -20,13 +20,19 @@ class TestcaseGenerate:
         self.current_num = 0  # 存放当前执行到第几条用例  set_up 和 teardown有用
         self.logger = project_logger.ProjectLogger().get_logger()
 
-    def load_case(self, file_path):
+    def load_case(self, file_path: str):
+        """
+        加载yaml数据
+        :param file_path: yaml文件路劲
+        """
         with open(file_path, 'r', encoding='utf-8') as f:
             self.data = yaml.safe_load(f)
         self.generate()
 
     def generate(self):
-        # 将yaml中的步骤进行转换并储存
+        """
+        将yaml中的步骤进行转换并储存
+        """
         for (title, steps) in self.data.items():
             if title == 'set_up':
                 self.testcase.set_up.append(steps)
@@ -43,6 +49,10 @@ class TestcaseGenerate:
                 self.testcase.steps_list.append({title: steps})
 
     def run_case(self, test_steps: dict):
+        """
+        执行用例
+        :param test_steps: 用例步骤
+        """
         current_index = 0
         val_len = None
         global_val.clear_all_data()

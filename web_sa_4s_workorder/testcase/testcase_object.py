@@ -37,7 +37,6 @@ class Testcase:
         执行测试步骤
         :param steps: 步骤
         """
-
         for step in steps:
             for (k, v) in step.items():
                 k: str

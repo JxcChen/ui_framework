@@ -4,6 +4,17 @@
 # @File     :test.py
 # @Desc     :
 import sys
-import platform
+from functools import reduce
 
-print(platform.system())
+
+def reduce_test():
+    # 累加功能： 1~5做累加  [1,2,3,4,5]  = > (((1+2) + 3) + 4)
+    def f(x, y):
+        result = x - y
+        return result
+
+    print(sum([1, 2, 3, 4, 5]))
+    print(reduce(f, [1, 2, 3, 4, 5]))
+
+
+reduce_test()
