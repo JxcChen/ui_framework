@@ -12,7 +12,7 @@ import yaml
 
 from web_sa_4s_workorder.base.utils import Utils
 from web_sa_4s_workorder.base.web import Web
-from web_sa_4s_workorder.base import global_val
+from web_sa_4s_workorder.base import global_val, utils
 
 
 class PageGenerate(Web):
@@ -25,10 +25,17 @@ class PageGenerate(Web):
         :param page_name: 页面名称
         """
         if not self.page_list.get(page_name):
-            with open(f'{os.path.dirname(__file__)}/{page_name}.yml', encoding='utf-8') as page:
+            # 先获取文件路径
+            file_path = utils.Utils.search_file(os.path.dirname(__file__),f'{page_name}.yml')
+            with open(file_path,encoding='utf-8') as page:
                 cur_page = yaml.safe_load(page)
             for (key, value) in cur_page.items():
                 self.page_list[key] = value
+        # if not self.page_list.get(page_name):
+        #     with open(f'{os.path.dirname(__file__)}/{page_name}.yml', encoding='utf-8') as page:
+        #         cur_page = yaml.safe_load(page)
+        #     for (key, value) in cur_page.items():
+        #         self.page_list[key] = value
         return self.page_list.get(page_name)['actions']
 
     def run_action(self, page_name, action_name: str):

@@ -6,7 +6,6 @@
 
 import os
 
-
 from jsonpath import jsonpath
 
 from web_sa_4s_workorder import project_logger
@@ -73,3 +72,13 @@ class Utils:
             if cls.PLACEHOLDER_PREFIX in value:
                 res[key] = cls.replace_form_2_actual(value, parameter)
         return res
+
+    @classmethod
+    def search_file(cls,dirPath, fileName):
+        dirs = os.listdir(dirPath)  # 查找该层文件夹下所有的文件及文件夹，返回列表
+        for currentFile in dirs:  # 遍历列表
+            file_path = dirPath + '/' + currentFile
+            if os.path.isdir(file_path):  # 如果是目录则递归，继续查找该目录下的文件
+                cls.search_file(file_path, fileName)
+            elif currentFile == fileName:
+                return file_path

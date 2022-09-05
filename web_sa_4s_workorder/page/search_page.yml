@@ -1,7 +1,0 @@
-search_page:
-  actions:
-    get_search_result_list:
-      - sleep: 2
-      - find_elements: ['xpath', "//h3/a/em"]
-      - get_elements_text: []
-      - save: search_elements
