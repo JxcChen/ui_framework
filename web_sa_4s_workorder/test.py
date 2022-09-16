@@ -5,16 +5,16 @@
 # @Desc     :
 import sys
 from functools import reduce
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 
-def reduce_test():
-    # 累加功能： 1~5做累加  [1,2,3,4,5]  = > (((1+2) + 3) + 4)
-    def f(x, y):
-        result = x - y
-        return result
+def init_web():
 
-    print(sum([1, 2, 3, 4, 5]))
-    print(reduce(f, [1, 2, 3, 4, 5]))
+    options = Options()
+    options.debugger_address = 'https://www.vmall.com/product/10086238622707.html#2601010388206'
+    driver = webdriver.Chrome(options=options)
 
 
-reduce_test()
+if __name__ == '__main__':
+    init_web()
