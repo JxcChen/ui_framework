@@ -5,10 +5,14 @@
 # @Desc     :方法模块
 
 import os
+import random
+import time
 
+import pymysql
 from jsonpath import jsonpath
 
 from web_sa_4s_workorder import project_logger
+from web_sa_4s_workorder.base.database_config import database_config
 
 
 class Utils:
@@ -16,6 +20,8 @@ class Utils:
     PLACEHOLDER_PREFIX = '${'
     PLACEHOLDER_SUFFIX = '}'
     logger = project_logger.ProjectLogger().get_logger()
+    conn = ''
+    cursor = ''
 
     @classmethod
     def jsonpath(cls, json_object, expr):
@@ -74,7 +80,13 @@ class Utils:
         return res
 
     @classmethod
-    def search_file(cls,dirPath, fileName):
+    def search_file(cls, dirPath, fileName):
+        """
+        遍历目录找到目标文件
+        :param dirPath: 文件路径
+        :param fileName: 目标文件名称
+        :return: 文件绝对路径
+        """
         dirs = os.listdir(dirPath)  # 查找该层文件夹下所有的文件及文件夹，返回列表
         for currentFile in dirs:  # 遍历列表
             file_path = dirPath + '/' + currentFile
@@ -82,3 +94,61 @@ class Utils:
                 cls.search_file(file_path, fileName)
             elif currentFile == fileName:
                 return file_path
+
+    @classmethod
+    def get_random(cls, num1, num2):
+        """
+        获取随机数
+        :param num1: 随机数左边界
+        :param num2: 随机数右边界
+        :return: 随机数
+        """
+        return random.Random().randint(num1, num2)
+
+    @classmethod
+    def get_time_stamp(cls):
+        """
+        获取当前时间戳
+        :return: 时间戳
+        """
+        return int(time.time())
+
+    @classmethod
+    def get_random_num(cls, formal_str):
+        """
+        获取随机数占位符的范围
+        """
+        if "random" not in formal_str:
+            cls.logger.info('没有找到占位符')
+            return 0
+
+        # 匹配上 random中的范围
+        try:
+            random_range = re.match(r'.*{random\((.*?)\)}', formal_str, flags=0).group(1)
+            min_max = random_range.split(',')
+            min_range = int(min_max[0])
+            max_range = int(min_max[1])
+            return [min_range, max_range]
+        except Exception as e:
+            cls.logger.error('随机数占位符格式错误')
+            return
+
+    def create_conn(self):
+        if not self.conn:
+            self.conn = pymysql.connect(charset='utf8', **database_config)
+            self.cursor = self.conn.cursor()
+
+    def close_conn(self):
+        if self.conn:
+            self.conn.close()
+
+    def excuse_sql(self, sql_str, params=None):
+        self.create_conn()
+        self.conn.ping(reconnect=True)
+        self.cursor.execute(sql_str, params)
+        # 判断是否为查询语句
+        if 'select' in sql_str:
+            return self.cursor.fetchone()
+        else:
+            self.conn.commit()
+            return self.cursor.fetchone()
