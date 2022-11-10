@@ -1,0 +1,96 @@
+******2022-08-06 15:36:27,815 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-06 15:36:27,841 - test - base_page.py,line 87 - INFO: 输入 key： selenium
+******2022-08-06 15:36:28,263 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:su
+******2022-08-06 15:36:28,278 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 15:36:30,367 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：xpath locator://h3/a/em 第None个
+******2022-08-06 15:36:30,397 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-06 15:36:30,600 - test - testcase_generate.py,line 53 - INFO: 测试用例 - test_search   当前参数：appium
+******2022-08-06 15:36:33,360 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-06 15:36:33,376 - test - base_page.py,line 87 - INFO: 输入 key： appium
+******2022-08-06 15:36:33,693 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:su
+******2022-08-06 15:36:33,735 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 15:36:35,795 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：xpath locator://h3/a/em 第None个
+******2022-08-06 15:36:35,808 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-06 16:12:43,572 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 16:22:58,465 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:10:53,775 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:17:02,316 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:17:09,952 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:17:16,905 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:17:16,963 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-06 19:17:16,975 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:18:03,572 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:18:03,584 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:18:03,644 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:18:03,777 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-06 19:18:03,787 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:24:06,786 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:24:06,798 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:24:11,862 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:24:11,916 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-06 19:24:11,928 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:25:05,445 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:25:05,458 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:25:10,516 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:25:10,587 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-06 19:25:10,596 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:28:15,949 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:28:15,963 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:28:21,040 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:28:21,084 - test - base_page.py,line 68 - INFO: 查找元素 by：css,locator:input[placeholder='请输入工单编号']
+******2022-08-06 19:28:21,087 - test - handle_exception.py,line 39 - ERROR: 元素查找失败 by：css,locator：input[placeholder='请输入工单编号'] 进行错误处理 当前处理次数：1
+******2022-08-06 19:28:21,088 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[@resource-id='iv_close']") locator:None 第None个
+******2022-08-06 19:28:24,102 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='下一步']") locator:None 第None个
+******2022-08-06 19:28:27,110 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 19:28:30,137 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='取消']") locator:None 第None个
+******2022-08-06 19:28:33,166 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 19:28:36,180 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='我知道了']") locator:None 第None个
+******2022-08-06 19:28:39,188 - test - base_page.py,line 179 - INFO: 进行截图 name：2022-08-06 19:28:39 png_dir：./image
+******2022-08-06 19:31:41,774 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:31:41,788 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:31:46,859 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:31:46,903 - test - base_page.py,line 68 - INFO: 查找元素 by：css,locator:input[placeholder='请输入工单编号']
+******2022-08-06 19:31:46,906 - test - handle_exception.py,line 39 - ERROR: 元素查找失败 by：css,locator：input[placeholder='请输入工单编号'] 进行错误处理 当前处理次数：1
+******2022-08-06 19:31:46,907 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[@resource-id='iv_close']") locator:None 第None个
+******2022-08-06 19:31:49,935 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='下一步']") locator:None 第None个
+******2022-08-06 19:31:52,990 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 19:31:56,052 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='取消']") locator:None 第None个
+******2022-08-06 19:31:59,073 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 19:32:02,115 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='我知道了']") locator:None 第None个
+******2022-08-06 19:32:05,125 - test - base_page.py,line 179 - INFO: 进行截图 name：2022-08-06 19:32:05 png_dir：./image
+******2022-08-06 19:33:26,909 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:33:26,923 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:33:31,987 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:33:32,019 - test - base_page.py,line 68 - INFO: 查找元素 by：css,locator:input[placeholder='请输入工单编号']
+******2022-08-06 19:33:32,022 - test - handle_exception.py,line 39 - ERROR: 元素查找失败 by：css,locator：input[placeholder='请输入工单编号'] 进行错误处理 当前处理次数：1
+******2022-08-06 19:33:32,022 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[@resource-id='iv_close']") locator:None 第None个
+******2022-08-06 19:33:35,036 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='下一步']") locator:None 第None个
+******2022-08-06 19:33:38,076 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 19:33:41,096 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='取消']") locator:None 第None个
+******2022-08-06 19:33:44,113 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 19:33:47,168 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='我知道了']") locator:None 第None个
+******2022-08-06 19:33:50,221 - test - base_page.py,line 179 - INFO: 进行截图 name：2022-08-06 19:33:50 png_dir：./image
+******2022-08-06 19:34:18,759 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 19:34:18,771 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:34:23,837 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 19:34:23,885 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://*[@placeholder="输入工单编号"]
+******2022-08-06 19:34:23,895 - test - base_page.py,line 87 - INFO: 输入 key： 12314
+******2022-08-06 19:34:24,097 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-06 19:34:24,107 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-06 22:33:48,517 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 22:33:51,595 - test - handle_exception.py,line 39 - ERROR: 元素查找失败 by：xpath,locator：//span[text()="四保"] 进行错误处理 当前处理次数：1
+******2022-08-06 22:33:51,596 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[@resource-id='iv_close']") locator:None 第None个
+******2022-08-06 22:33:54,609 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='下一步']") locator:None 第None个
+******2022-08-06 22:33:57,664 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 22:34:00,729 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='取消']") locator:None 第None个
+******2022-08-06 22:34:03,759 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-06 22:34:06,766 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='我知道了']") locator:None 第None个
+******2022-08-06 22:34:09,823 - test - base_page.py,line 179 - INFO: 进行截图 name：2022-08-06 22:34:09 png_dir：./image
+******2022-08-06 23:01:07,501 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 23:13:48,008 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-06 23:13:48,034 - test - base_page.py,line 80 - INFO: 点击元素
+******2022-08-06 23:13:53,128 - test - base_page.py,line 80 - INFO: 点击元素
+******2022-08-06 23:13:53,175 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder="输入工单编号"]
+******2022-08-06 23:13:53,185 - test - base_page.py,line 88 - INFO: 输入 key： 12314
+******2022-08-06 23:13:53,389 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-06 23:13:53,401 - test - base_page.py,line 80 - INFO: 点击元素

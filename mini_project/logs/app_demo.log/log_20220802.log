@@ -1,0 +1,67 @@
+******2022-08-02 21:25:08,435 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'kw'),locator:None
+******2022-08-02 21:25:08,633 - test - base_page.py,line 87 - INFO: 输入 key： ${key}
+******2022-08-02 21:25:08,858 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'su'),locator:None
+******2022-08-02 21:25:08,869 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:25:12,927 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', '//h3/a/em') locator:None 第None个
+******2022-08-02 21:25:15,977 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:26:49,782 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'kw'),locator:None
+******2022-08-02 21:26:49,976 - test - base_page.py,line 87 - INFO: 输入 key： ${key}
+******2022-08-02 21:26:50,202 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'su'),locator:None
+******2022-08-02 21:26:50,218 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:26:54,549 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', '//h3/a/em') locator:None 第None个
+******2022-08-02 21:26:55,934 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:27:29,049 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'kw'),locator:None
+******2022-08-02 21:27:29,264 - test - base_page.py,line 87 - INFO: 输入 key： ${key}
+******2022-08-02 21:27:29,507 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'su'),locator:None
+******2022-08-02 21:27:29,524 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:27:33,605 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', '//h3/a/em') locator:None 第None个
+******2022-08-02 21:27:36,443 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:28:23,483 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'kw'),locator:None
+******2022-08-02 21:28:23,710 - test - base_page.py,line 87 - INFO: 输入 key： ${key}
+******2022-08-02 21:28:23,944 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'su'),locator:None
+******2022-08-02 21:28:23,984 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:28:28,229 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', '//h3/a/em') locator:None 第None个
+******2022-08-02 21:28:31,256 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:31:45,915 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'kw'),locator:None
+******2022-08-02 21:31:46,095 - test - base_page.py,line 87 - INFO: 输入 key： ${key}
+******2022-08-02 21:31:46,271 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'su'),locator:None
+******2022-08-02 21:31:46,281 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:31:53,107 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', '//h3/a/em') locator:None 第None个
+******2022-08-02 21:31:53,121 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:33:39,388 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'kw'),locator:None
+******2022-08-02 21:33:39,410 - test - base_page.py,line 87 - INFO: 输入 key： ${key}
+******2022-08-02 21:33:39,752 - test - base_page.py,line 68 - INFO: 查找元素 by：('id', 'su'),locator:None
+******2022-08-02 21:33:39,786 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:33:41,882 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', '//h3/a/em') locator:None 第None个
+******2022-08-02 21:33:41,894 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:37:23,712 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-02 21:42:43,121 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-02 21:42:43,281 - test - base_page.py,line 87 - INFO: 输入 key： selenium
+******2022-08-02 21:42:43,499 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:su
+******2022-08-02 21:42:43,512 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:42:45,612 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：xpath locator://h3/a/em 第None个
+******2022-08-02 21:42:47,900 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:45:12,802 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-02 21:45:12,986 - test - base_page.py,line 87 - INFO: 输入 key： selenium
+******2022-08-02 21:45:13,228 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:su
+******2022-08-02 21:45:13,241 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:45:15,324 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：xpath locator://h3/a/em 第None个
+******2022-08-02 21:45:15,336 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:45:23,260 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-02 21:45:36,930 - test - base_page.py,line 87 - INFO: 输入 key： selenium
+******2022-08-02 21:45:50,222 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:su
+******2022-08-02 21:45:55,314 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:46:02,816 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：xpath locator://h3/a/em 第None个
+******2022-08-02 21:46:02,831 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:48:40,333 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-02 21:49:00,022 - test - base_page.py,line 87 - INFO: 输入 key： selenium
+******2022-08-02 21:49:33,322 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:su
+******2022-08-02 21:49:33,336 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:49:35,435 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：xpath locator://h3/a/em 第None个
+******2022-08-02 21:49:38,492 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表
+******2022-08-02 21:53:14,364 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
+******2022-08-02 21:53:18,971 - test - base_page.py,line 87 - INFO: 输入 key： selenium
+******2022-08-02 21:53:19,089 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:su
+******2022-08-02 21:53:19,103 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-02 21:53:21,195 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：xpath locator://h3/a/em 第None个
+******2022-08-02 21:53:22,010 - test - base_page.py,line 131 - INFO: 获取元素的文本属性列表

@@ -1,0 +1,288 @@
+******2022-08-07 07:48:18,661 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 07:48:21,668 - test - handle_exception.py,line 39 - ERROR: 元素查找失败 by：xpath,locator：//span[text()="四保"] 进行错误处理 当前处理次数：1
+******2022-08-07 07:48:21,669 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[@resource-id='iv_close']") locator:None 第None个
+******2022-08-07 07:48:24,735 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='下一步']") locator:None 第None个
+******2022-08-07 07:48:27,789 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-07 07:48:30,828 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='取消']") locator:None 第None个
+******2022-08-07 07:48:33,869 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
+******2022-08-07 07:48:36,875 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='我知道了']") locator:None 第None个
+******2022-08-07 07:48:39,919 - test - base_page.py,line 179 - INFO: 进行截图 name：2022-08-07 07:48:39 png_dir：./image
+******2022-08-07 07:49:32,005 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 07:49:32,020 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-07 07:49:32,085 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-07 07:49:32,249 - test - base_page.py,line 68 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 07:49:32,260 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-07 07:49:32,416 - test - base_page.py,line 68 - INFO: 查找元素 by：xpath,locator://*[text()="金地威新软件园"]
+******2022-08-07 07:49:32,428 - test - base_page.py,line 79 - INFO: 点击元素
+******2022-08-07 15:31:17,032 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:31:17,049 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:37:16,799 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:37:16,818 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:37:16,938 - test - testcase_object.py,line 67 - INFO: 进行断言 断言方式：in 预期值：金地威新软件园 实际值：$search_result
+******2022-08-07 15:38:41,756 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:38:41,775 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:42:53,313 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:42:53,326 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:43:43,433 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:43:43,449 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:45:04,557 - test - testcase_object.py,line 67 - INFO: 进行断言 断言方式：in 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 15:46:08,993 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:46:09,005 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:46:13,493 - test - testcase_object.py,line 67 - INFO: 进行断言 断言方式：in 预期值：金地威新软件园 实际值：${search_result}
+******2022-08-07 15:46:42,536 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:46:42,553 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:51:50,905 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:51:50,918 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:52:08,716 - test - testcase_object.py,line 67 - INFO: 进行断言 断言方式：in 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 15:57:29,604 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 15:57:29,618 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 15:57:36,740 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:02:45,063 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:02:45,076 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:02:45,225 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:02:45,307 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:02:45,308 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:02:48,608 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:02:48,620 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:02:48,673 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:02:48,812 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:02:48,822 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:02:48,919 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:02:48,930 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:02:49,042 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:02:49,065 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:02:49,138 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:02:49,152 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:02:49,457 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()='待处理']
+******2022-08-07 16:02:49,470 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:02:49,481 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:02:49,515 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:02:49,527 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:04:30,678 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:04:30,691 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:04:30,835 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:04:30,919 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:04:30,920 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:04:33,627 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:04:33,754 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:04:33,806 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:04:33,941 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:04:33,952 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:04:34,109 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:04:34,122 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:04:34,171 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:04:34,186 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:04:34,269 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:04:34,282 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:04:34,587 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()='待处理']
+******2022-08-07 16:04:34,602 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:04:34,613 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:04:34,647 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:04:34,658 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:06:25,925 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:06:28,233 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:06:28,364 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:06:28,365 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:06:28,365 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:06:31,016 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:06:31,039 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:06:31,099 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:06:31,124 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:06:31,262 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:06:31,356 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:06:31,404 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:06:31,475 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:06:31,490 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:06:31,569 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:06:31,584 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:06:31,944 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()='待处理']
+******2022-08-07 16:06:31,958 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:06:31,970 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:06:32,004 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:06:36,732 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:07:21,996 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:07:27,923 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:07:28,059 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:07:28,060 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:07:28,060 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:07:31,241 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:07:31,256 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:07:31,308 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:07:31,444 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:07:31,455 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:07:31,607 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:07:31,619 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:07:31,660 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:07:31,673 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:07:31,756 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:07:31,768 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:07:32,111 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()='待处理']
+******2022-08-07 16:07:32,124 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:07:32,135 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:07:32,171 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:07:47,850 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:12:46,775 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:12:46,789 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:12:46,911 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:12:46,986 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:12:46,986 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:12:49,791 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:12:49,806 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:12:49,877 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:12:50,009 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:12:50,021 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:12:50,176 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:12:50,191 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:12:50,233 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:12:50,247 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:12:50,333 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:12:50,344 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:12:50,688 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()='待处理']
+******2022-08-07 16:12:50,700 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:12:50,711 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:12:51,751 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:12:51,771 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:12:51,834 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：深圳金地物业 实际值：['深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业']
+******2022-08-07 16:13:05,748 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:13:05,763 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:13:05,883 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:13:05,960 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:13:05,963 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:13:08,750 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:13:08,762 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:08,828 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:08,975 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:13:08,985 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:09,139 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:13:09,151 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:09,193 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:13:09,207 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:09,288 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:13:09,300 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:09,602 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()='待处理']
+******2022-08-07 16:13:09,616 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:13:09,626 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:10,667 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:13:10,688 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:13:10,750 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：深圳金地物业 实际值：['深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业']
+******2022-08-07 16:13:56,930 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:13:56,942 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:13:57,058 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:13:57,142 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:13:57,144 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:13:59,834 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:13:59,847 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:59,900 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:13:59,921 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:14:00,071 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:14:00,162 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:14:00,211 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:14:00,284 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:14:00,297 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:14:00,371 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:14:00,385 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:14:00,698 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()='待处理']
+******2022-08-07 16:14:00,710 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:14:00,746 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:14:00,757 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:14:01,798 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:14:01,819 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:14:01,884 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：深圳金地物业 实际值：['深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业']
+******2022-08-07 16:16:56,904 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:16:56,953 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:16:57,079 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园', '金地威新软件园']
+******2022-08-07 16:16:57,183 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:16:57,184 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:17:00,029 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:17:00,052 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:00,110 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:00,235 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:17:00,247 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:00,304 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:17:00,387 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:00,466 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:17:00,477 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:00,548 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:17:00,560 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:01,891 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://li/span[text()='待处理']
+******2022-08-07 16:17:01,904 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:01,951 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:17:01,963 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:17:02,997 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:17:03,018 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:17:03,080 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：深圳金地物业 实际值：['深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业']
+******2022-08-07 16:18:37,165 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:18:37,184 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:18:37,200 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园']
+******2022-08-07 16:18:37,287 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:18:37,288 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:18:40,076 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:18:40,095 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:40,155 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:40,284 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:18:40,294 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:40,449 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:18:40,461 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:40,509 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:18:40,525 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:40,600 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:18:40,613 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:40,967 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://li/span[text()='待处理']
+******2022-08-07 16:18:40,982 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:41,088 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:18:41,098 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:18:42,136 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:18:42,157 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:18:42,218 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：深圳金地物业 实际值：['深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业']
+******2022-08-07 16:19:48,315 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:19:48,330 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:19:48,344 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园']
+******2022-08-07 16:19:48,419 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:19:48,420 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:19:51,362 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:19:51,391 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:51,455 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:51,584 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:19:51,595 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:51,752 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:19:51,764 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:51,810 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:19:51,822 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:51,906 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:19:51,917 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:52,223 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://li/span[text()='待处理']
+******2022-08-07 16:19:52,238 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:52,344 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:19:52,354 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:19:53,392 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:19:53,413 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:19:53,475 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：深圳金地物业 实际值：['深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业']
+******2022-08-07 16:26:32,301 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:26:32,316 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:26:32,330 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[4] 第None个
+******2022-08-07 16:26:32,342 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:26:32,355 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：金地威新软件园 实际值：['金地威新软件园']
+******2022-08-07 16:26:32,355 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：待指派 实际值：['待指派']
+******2022-08-07 16:26:32,433 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：深圳金地物业
+******2022-08-07 16:26:32,437 - test - testcase_generate.py,line 52 - INFO: 测试用例 - test_search   当前参数：待处理
+******2022-08-07 16:26:35,169 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="四保"]
+******2022-08-07 16:26:35,190 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:35,244 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:35,381 - test - base_page.py,line 69 - INFO: 查找元素 by：css selector,locator:input[placeholder='请选择项目']
+******2022-08-07 16:26:35,391 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:35,544 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="深圳金地物业"]
+******2022-08-07 16:26:35,555 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:35,604 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[text()="确定"]
+******2022-08-07 16:26:35,617 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:35,692 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://*[@placeholder="请选择工单状态"]
+******2022-08-07 16:26:35,715 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:36,058 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://li/span[text()='待处理']
+******2022-08-07 16:26:36,072 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:36,168 - test - base_page.py,line 69 - INFO: 查找元素 by：xpath,locator://span[text()="搜索"]
+******2022-08-07 16:26:36,178 - test - base_page.py,line 85 - INFO: 点击元素
+******2022-08-07 16:26:37,220 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[6] 第None个
+******2022-08-07 16:26:37,241 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:26:37,303 - test - base_page.py,line 125 - INFO: 查找全部相关元素 by：xpath locator://tr[contains(@class,"el-table__row")]/td[4] 第None个
+******2022-08-07 16:26:37,313 - test - base_page.py,line 142 - INFO: 获取元素的文本属性列表
+******2022-08-07 16:26:37,374 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：深圳金地物业 实际值：['深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业', '深圳金地物业']
+******2022-08-07 16:26:37,375 - test - testcase_object.py,line 68 - INFO: 进行断言 断言方式：in_each 预期值：待处理 实际值：['待处理', '待处理', '待处理', '待处理', '待处理']

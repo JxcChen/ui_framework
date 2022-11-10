@@ -1,0 +1,21 @@
+capability:
+    # 设备操作系统
+    "platformName": "Android"
+    # 设备名称(随意填写)
+    "deviceName": "HuaWeiP30"
+    # 应用程序的包名
+    "appPackage": "com.tencent.mm"
+    # 应用程序的启动页面
+    "appActivity": ".ui.LauncherUI"
+    # 不重置app
+    "noReset": "true"
+    # 执行完后不停止app
+    dontStopAppOnReset: "true"
+    # 驱动相关
+    chromedriverExecutable: "/Users/chnjx/devApps/driver/all_driver/chromedriver_86"
+    showChromedriverLog: "true"
+    ensureWebviewsHavePages: "false"
+
+server:
+  host: http://127.0.0.1
+  port: 4723

@@ -1,0 +1,9 @@
+main_page:
+  actions:
+    into_shares_page:
+      - find: ['xpath','//*[@text="股票"]']
+      - click: ()
+      - return: shares_page
+
+    back:
+      - back: [ 'xpath','//*[@text="大盘行情"]' ]
