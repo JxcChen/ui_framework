@@ -1,5 +1,13 @@
 4s_page:
   actions:
     into_4s_workorder_page:
-      - click: ['xpath','//*[text()="作业工单"]']
+      - find: ['xpath','//*[text()=" 作业工单 "]']
+      - click: ()
       - return: 4s_workorder_page
+
+    into_point_page:
+      - find: [ 'xpath','//*[text()=" 项目配置 "]' ]
+      - click: ()
+      - find: [ 'xpath','//*[text()=" 点位管理 "]' ]
+      - click: ()
+      - return: point_manager_page

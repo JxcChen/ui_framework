@@ -6,7 +6,7 @@
 
 from web_sa_4s_workorder.page.web_page_generate import PageGenerate
 from web_sa_4s_workorder.base import global_val
-from web_sa_4s_workorder.testcase.utils import Utils
+from web_sa_4s_workorder.base.utils import Utils
 
 
 class Testcase:

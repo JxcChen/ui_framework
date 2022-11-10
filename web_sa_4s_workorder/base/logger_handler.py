@@ -22,6 +22,8 @@ class LoggerHandler:
         :param log_level: 日志收集等级 默认为debug
         """
         logger = logging.getLogger(name)
+        if logger.handlers:
+            return logger
         if log_level == 'debug':
             logger.setLevel(logging.DEBUG)
         elif log_level == 'info':
@@ -33,6 +35,8 @@ class LoggerHandler:
         file_name = 'log_{}.log'.format(now_string)
         root_path = os.path.abspath(
             os.path.join(cls.workdir, "../logs"))
+        if not os.path.exists(root_path):
+            os.mkdir(root_path)
         _folder_path = os.path.join(root_path, package_name)
         if not os.path.exists(_folder_path):
             os.mkdir(_folder_path)
@@ -46,16 +50,16 @@ class LoggerHandler:
 
         # FileHandler
         fh = logging.FileHandler(file_path, mode='a', encoding='utf-8')
-        fh.setLevel(logging.DEBUG)
+        fh.setLevel(logging.INFO)
         formatter = logging.Formatter(
             '******%(asctime)s - %(name)s - %(filename)s,line %(lineno)s - %(levelname)s: %(message)s')
         fh.setFormatter(formatter)
 
         sh = logging.StreamHandler(sys.stdout)
         sh.setFormatter(formatter)
-        sh.setLevel(logging.DEBUG)
+        sh.setLevel(logging.INFO)
         logger.addHandler(fh)
-        # logger.addHandler(sh)
+        logger.addHandler(sh)
         # logger.addHandler(uh)
 
         return logger

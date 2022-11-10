@@ -2,13 +2,37 @@ data:
   test_search:
     project: [金地威新软件园,深圳金地物业]
     status: [待指派,待处理]
+  test_search_with_order_num:
+    order_num: [GD202208160000010023,GD202208160000010022]
+  test_search_with_trigger_type:
+    trigger_type: ['手动','周期']
 
-test_search:
+set_up:
   - main_page.init: {}
   - main_page.into_4s_page: {}
+
+teardown_class:
+  - main_page.quit: {}
+
+test_search:
   - 4s_page.into_4s_workorder_page: {}
   - 4s_workorder_page.search_workorder: {project: '${project}',status: '${status}'}
   - 4s_workorder_page.get_search_res: {}
   - validate:
       - in_each: ['${project}','${search_project_result}']
       - in_each: ['${status}','${search_status_result}']
+
+test_search_with_order_num:
+  - 4s_page.into_4s_workorder_page: {}
+  - 4s_workorder_page.search_workorder: {order_num: '${order_num}'}
+  - 4s_workorder_page.get_search_res: {}
+  - validate:
+      - in_each: [ '${order_num}','${search_order_num_result}' ]
+
+test_search_with_trigger_type:
+  - 4s_page.into_4s_workorder_page: {}
+  - 4s_workorder_page.search_workorder: {trigger_type: '${trigger_type}'}
+  - 4s_workorder_page.get_search_res: {}
+  - validate:
+      - in_each: [ '${trigger_type}','${search_trigger_type_result}' ]
+

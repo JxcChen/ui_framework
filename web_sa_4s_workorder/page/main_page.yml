@@ -10,3 +10,5 @@ main_page:
       - find: ['xpath','//span[text()="四保"]']
       - click: ()
       - return: 4s_page
+    quit:
+      - quit: {}

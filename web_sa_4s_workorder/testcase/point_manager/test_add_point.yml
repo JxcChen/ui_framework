@@ -1,0 +1,14 @@
+set_up:
+  - main_page.init: {}
+  - main_page.into_4s_page: {}
+  - 4s_page.into_point_page: {}
+
+teardown_class:
+  - main_page.quit: {}
+
+test_add_point:
+  - point_manager_page.into_add_page: {}
+  - point_manager_page.add_point: {'point_name': 'ui自动化','point_position':'点位111','point_description':'1231'}
+  - point_manager_page.get_add_res: {}
+  - validate:
+      - equals: ['ui自动化',"${add_res}"]

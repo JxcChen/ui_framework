@@ -9,6 +9,7 @@ import os
 
 from jsonpath import jsonpath
 
+from app_demo_project import project_logger
 from app_demo_project.base.logger_handler import LoggerHandler
 
 
@@ -16,7 +17,7 @@ class Utils:
     workdir = os.path.split(os.path.realpath(__file__))[0]
     PLACEHOLDER_PREFIX = '${'
     PLACEHOLDER_SUFFIX = '}'
-    logger = LoggerHandler.getLogger("CHNJX", "demo")
+    logger = project_logger.ProjectLogger().get_logger()
 
     @classmethod
     def jsonpath(cls, json_object, expr):

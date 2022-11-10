@@ -5,7 +5,7 @@
 # @Desc     :获取日志控制器  单利模式
 from logging import Logger
 
-from app_demo_project.base.logger_handler import LoggerHandler
+from web_sa_4s_workorder.base.logger_handler import LoggerHandler
 
 
 def singleton(cls):
@@ -37,9 +37,9 @@ class ProjectLogger:
     def __init__(self):
         if not self._flag:
             self._flag = True
-            self._logger = LoggerHandler.getLogger('test', 'app_demo.log', 'debug')
+            self._logger = LoggerHandler.get_logger('test', 'app_demo.log', 'debug')
 
     def get_logger(self) -> Logger:
         if self._logger is None:
-            self._logger = LoggerHandler.getLogger('test', 'app_demo.log', 'debug')
+            self._logger = LoggerHandler.get_logger('test', 'app_demo.log', 'debug')
         return self._logger

@@ -1,0 +1,51 @@
+point_manager_page:
+  actions:
+    into_add_page:
+      - find: ['xpath','//*[text()="新建"]']
+      - click: ()
+
+    add_point:
+      - find: ['css','input[placeholder=输入点位名称，项目内名称唯一]']
+      - send: "${point_name}"
+      - find: ['css','input[placeholder=请选择项目]']
+      - click: ()
+      - find: ['xpath','//*[text()="北京物业项目"]']
+      - click: ()
+      - find: ['xpath','//*[text()="确定"]']
+      - click: ()
+      - find: ['css','input[placeholder=请输入点位位置]']
+      - send: "${point_position}"
+      - find: ['css','textarea[placeholder=请输入点位描述]']
+      - send: "${point_description}"
+      - find: [ 'xpath','//*[text()="确认"]' ]
+      - click: ()
+      - sleep: 1
+
+    get_add_res:
+      - find: ['xpath','//*[text()="搜索"]']
+      - click: ()
+      - find: ['css','.el-table__row:nth-child(1) td:nth-child(1)']
+      - text: {}
+      - save: add_res
+
+    search_point:
+      if_project:
+        - find: ['xpath','//*[@placeholder="请选择项目"]']
+        - click: {}
+        - find: ['xpath','//*[@placeholder="请选择"]']
+        - send: '${project}'
+        - find_elements: ['xpath','//*[text()="搜索"]',0]
+        - click: ()
+        - find: ['xpath','//span[text()="金地威新软件园"]']
+        - click: ()
+        - find: ['xpath','//*[text()="确定"]']
+        - click: ()
+      if_point_name:
+        - find: ['xpath','//*[@placeholder="输入点位名称搜索"]']
+        - send: '${point_name}'
+      if_point_status:
+        - find: ['xpath','//*[@placeholder="选择点位状态"]']
+        - click: ()
+        - find: ['xpath','//li/span[text()="${point_status}"]']
+      - find_elements: ['xpath','//*[text()="搜索"]',0]
+      - click: ()

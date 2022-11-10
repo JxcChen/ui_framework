@@ -20,8 +20,9 @@
           - find: ['css',"input[placeholder='请选择质检触发方式']"]
           - click: ()
           - find: [ 'xpath',"//span[text()='${trigger_type}']" ]
+          - click: ()
       - if_workorder_type:
-          - find: [ 'css',"input[placeholder='请选择工单类型']" ]
+          - find: [ 'css',"//input[@placeholder='请选择工单类型']" ]
           - click: ()
           - find: [ 'xpath',"//span[text()='${workorder_type}']" ]
       - find: ['xpath','//span[text()="搜索"]']
@@ -35,5 +36,11 @@
       - find_elements: [ 'xpath','//tr[contains(@class,"el-table__row")]/td[4]' ] # 状态列
       - get_elements_text: ()
       - save: search_status_result
+      - find_elements: [ 'xpath','//tr[contains(@class,"el-table__row")]/td[1]' ] # 工单列
+      - get_elements_text: ()
+      - save: search_order_num_result
+      - find_elements: [ 'xpath','//tr[contains(@class,"el-table__row")]/td[7]' ] # 工单列
+      - get_elements_text: ()
+      - save: search_trigger_type_result
 
 
