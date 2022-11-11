@@ -18,7 +18,7 @@ class MainPage(App):
         """
         报事页面
         """
-        self.find_and_click(MobileBy.XPATH, "//*[@class='common_button report_btn']")
+        self.find_and_click(MobileBy.XPATH, "//wx-button")
 
     def into_mini_main_page(self):
         """
@@ -26,10 +26,10 @@ class MainPage(App):
         :return: 当前页面
         """
 
-        self.find_and_click(MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("发现")') \
+        self.find_and_click(MobileBy.XPATH, "//*[@text='发现']") \
             .find_and_click(MobileBy.XPATH, "//*[@text='小程序']") \
             .find_and_click(MobileBy.XPATH, "//*[@text='想家友邻']")
         sleep(2)
-        self.switch_context("WEBVIEW_com.tencent.mm:appbrand0")
+        self.switch_context()
         self.switch_windows(':VISIBLE')
         return self

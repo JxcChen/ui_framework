@@ -60,7 +60,7 @@ class BasePage:
         self.caps = cap_conf['capability']
         self.driver = webdriver.Remote(f"{cap_conf['server']['host']}:{cap_conf['server']['port']}/wd/hub", self.caps)
 
-    @handle_exception
+    # @handle_exception
     def find_element(self, by, locator: str = None) -> WebElement:
         """
         查找元素
@@ -201,7 +201,6 @@ class BasePage:
     # ******************* app *************************
     # todo: app 滑动
     # todo: app 双指操作
-
 
     def switch_windows(self, pattern: str):
         for window in self.driver.window_handles:

@@ -10,11 +10,13 @@ capability:
     # 不重置app
     "noReset": "true"
     # 执行完后不停止app
-    dontStopAppOnReset: "true"
+    # dontStopAppOnReset: "true"
     # 驱动相关
-    chromedriverExecutable: "G:\\chromedriver\\chromedriver_86\\chromedriver.exe"
-    showChromedriverLog: "true"
-    ensureWebviewsHavePages: "false"
+    "chromedriverExecutable": "G:\\chromedriver\\chromedriver_86\\chromedriver.exe"
+#    "chromeOptions": { "androidProcess": "com.tencent.mm:appbrand0" }
+    "recreateChromeDriverSessions": True
+    "unicodeKeyboard": True
+    "skipServerInstallation ": True
 
 server:
   host: http://127.0.0.1
