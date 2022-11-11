@@ -190,3 +190,21 @@ class BasePage:
         with open(png_path, 'rb') as f:
             allure.attach(f.read(), attachment_type=allure.attachment_type.PNG)
         return png_path
+
+    # ******************* web *************************
+    def scroll_to_bottom(self):
+        """
+        滑动到页面底部
+        """
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    # ******************* app *************************
+    # todo: app 滑动
+    # todo: app 双指操作
+
+
+    def switch_windows(self, pattern: str):
+        for window in self.driver.window_handles:
+            self.driver.switch_to.window(window)
+            if pattern in self.driver.title:
+                break

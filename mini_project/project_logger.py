@@ -3,29 +3,14 @@
 # @Author   :CHNJX
 # @File     :project_logger.py
 # @Desc     :获取日志控制器  单利模式
+import logging
 from logging import Logger
 
 from app_demo_project.base.logger_handler import LoggerHandler
 
 
-def singleton(cls):
-    # 创建一个字典用来保存类的实例对象
-    _instance = {}
-
-    def _singleton(*args, **kwargs):
-        # 先判断这个类有没有对象
-        if cls not in _instance:
-            _instance[cls] = cls(*args, **kwargs)  # 创建一个对象,并保存到字典当中
-        # 将实例对象返回
-        return _instance[cls]
-
-    return _singleton
-
-
 class ProjectLogger:
     _logger = None
-
-    # 静态变量
     _instance = None
     _flag = False
 
@@ -37,9 +22,7 @@ class ProjectLogger:
     def __init__(self):
         if not self._flag:
             self._flag = True
-            self._logger = LoggerHandler.getLogger('test', 'app_demo.log', 'debug')
+            self._logger = LoggerHandler.get_logger('test', 'mini_log', 'debug')
 
-    def get_logger(self) -> Logger:
-        if self._logger is None:
-            self._logger = LoggerHandler.getLogger('test', 'app_demo.log', 'debug')
+    def get_logger(self) -> logging:
         return self._logger

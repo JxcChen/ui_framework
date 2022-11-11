@@ -3,7 +3,7 @@
 # @Author   :CHNJX
 # @File     :test_yaml.py
 # @Desc     :
-from app_demo_project.page.app_page_generate import PageGenerate
+from mini_project.page.app_page_generate import PageGenerate
 
 
 def test_01():

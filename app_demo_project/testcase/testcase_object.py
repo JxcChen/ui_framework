@@ -3,10 +3,10 @@
 # @Author   :CHNJX
 # @File     :testcase_object.py
 # @Desc     :测试用例的实体类
-from app_demo_project import project_logger
-from app_demo_project.page.web_page_generate import PageGenerate
-from app_demo_project.base import global_val
-from app_demo_project.testcase.utils import Utils
+from mini_project import project_logger
+from mini_project.page.web_page_generate import PageGenerate
+from mini_project.base import global_val
+from mini_project.testcase.utils import Utils
 
 
 class Testcase:

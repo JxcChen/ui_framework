@@ -12,7 +12,7 @@ capability:
     # 执行完后不停止app
     dontStopAppOnReset: "true"
     # 驱动相关
-    chromedriverExecutable: "/Users/chnjx/devApps/driver/all_driver/chromedriver_86"
+    chromedriverExecutable: "G:\\chromedriver\\chromedriver_86\\chromedriver.exe"
     showChromedriverLog: "true"
     ensureWebviewsHavePages: "false"
 

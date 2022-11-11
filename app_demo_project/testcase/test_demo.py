@@ -3,7 +3,7 @@
 # @Author   :CHNJX
 # @File     :test_demo.py
 # @Desc     :app测试用例
-from app_demo_project.page.main_page import MainPage
+from mini_project.page.main_page import MainPage
 
 
 class TestDemo:

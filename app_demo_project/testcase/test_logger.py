@@ -3,7 +3,7 @@
 # @Author   :CHNJX
 # @File     :project_logger.py
 # @Desc     :測試日志
-from app_demo_project.base import LoggerHandler
+from mini_project.base import LoggerHandler
 
 logger = LoggerHandler.get_logger('testcase', 'app_demo_log')
 

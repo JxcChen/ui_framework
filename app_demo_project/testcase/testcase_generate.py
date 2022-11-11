@@ -7,7 +7,7 @@ import os
 
 import yaml
 
-from app_demo_project import project_logger
+from mini_project import project_logger
 from web_sa_4s_workorder.testcase.testcase_object import Testcase
 
 

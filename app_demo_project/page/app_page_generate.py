@@ -11,10 +11,10 @@ import time
 
 import yaml
 
-from app_demo_project import project_logger
-from app_demo_project.base.app import App
-from app_demo_project.base import global_val
-from app_demo_project.base.utils import Utils
+from mini_project import project_logger
+from mini_project.base.app import App
+from mini_project.base import global_val
+from mini_project.base.utils import Utils
 
 
 class PageGenerate(App):

@@ -6,7 +6,7 @@
 import logging
 import subprocess
 
-from app_demo_project.base.base_page import BasePage
+from mini_project.base.base_page import BasePage
 
 
 def back_handle(func):

@@ -5,7 +5,7 @@
 # @Desc     :股票页面
 from selenium.webdriver.common.by import By
 
-from app_demo_project.base import App
+from mini_project.base import App
 
 
 class SharesPage(App):

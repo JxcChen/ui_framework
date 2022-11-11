@@ -6,7 +6,7 @@
 
 from selenium.webdriver.common.by import By
 
-from app_demo_project.project_logger import ProjectLogger
+from mini_project.project_logger import ProjectLogger
 
 _black_list = [(By.XPATH, "//*[@resource-id='iv_close']"),
                (By.XPATH, "//*[text='下一步']"),
@@ -24,7 +24,7 @@ def handle_exception(func):
     :param func: 需要被修饰的方法
     """
     def close_exception(*args, **kwargs):
-        from app_demo_project.base.base_page import BasePage
+        from mini_project.base.base_page import BasePage
         # 获取实例  args[0] = self
         instance: BasePage = args[0]
         try:

@@ -9,8 +9,8 @@ import os
 
 from jsonpath import jsonpath
 
-from app_demo_project import project_logger
-from app_demo_project.base.logger_handler import LoggerHandler
+from mini_project import project_logger
+from mini_project.base.logger_handler import LoggerHandler
 
 
 class Utils:

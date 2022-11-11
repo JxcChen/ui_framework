@@ -64,8 +64,4 @@ class App(BasePage):
             contexts = self.driver.contexts
             self.driver.switch_to.context(contexts[-1])
 
-    def switch_windows(self, pattern: str):
-        for window in self.driver.window_handles:
-            self.driver.switch_to.window(window)
-            if pattern in self.driver.title:
-                break
+

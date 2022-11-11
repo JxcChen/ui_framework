@@ -16,8 +16,8 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from app_demo_project.base.handle_exception import handle_exception
-from app_demo_project.project_logger import ProjectLogger
+from mini_project.base.handle_exception import handle_exception
+from mini_project.project_logger import ProjectLogger
 
 
 class BasePage:

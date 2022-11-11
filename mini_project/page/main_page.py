@@ -18,7 +18,7 @@ class MainPage(App):
         """
         报事页面
         """
-        self.find_and_click(By.XPATH, "//*[text()='告诉我们您的服务诉求']")
+        self.find_and_click(MobileBy.XPATH, "//*[@class='common_button report_btn']")
 
     def into_mini_main_page(self):
         """
@@ -26,7 +26,7 @@ class MainPage(App):
         :return: 当前页面
         """
 
-        self.find_and_click(MobileBy.XPATH, "//*[@text='发现']") \
+        self.find_and_click(MobileBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("发现")') \
             .find_and_click(MobileBy.XPATH, "//*[@text='小程序']") \
             .find_and_click(MobileBy.XPATH, "//*[@text='想家友邻']")
         sleep(2)

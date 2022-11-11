@@ -6,8 +6,8 @@
 from selenium.webdriver.common.by import By
 
 from app_demo_project import project_logger
-from mini_project.page.shares_page import SharesPage
-from mini_project.base.app import App
+from app_demo_project.page.shares_page import SharesPage
+from app_demo_project.base.app import App
 
 
 class MainPage(App):
