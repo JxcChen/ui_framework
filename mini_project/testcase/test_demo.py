@@ -11,5 +11,5 @@ class TestDemo:
     def setup_class(self):
         self.main = MainPage().into_mini_main_page()
 
-    def test_02(self):
-        self.main.into_baoshi_page()
+    def test_report_home_repair(self):
+        assert '提交成功' in self.main.into_report_page().report_home_repair().get_report_result()

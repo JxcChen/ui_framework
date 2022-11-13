@@ -8,17 +8,20 @@ from time import sleep
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.common.by import By
 
-from mini_project import project_logger
-from mini_project.page.shares_page import SharesPage
+
 from mini_project.base.app import App
+from mini_project.page.report_page import ReportPage
 
 
 class MainPage(App):
-    def into_baoshi_page(self):
+    def into_report_page(self) -> ReportPage:
         """
         报事页面
         """
         self.find_and_click(MobileBy.XPATH, "//wx-button")
+        self.switch_windows(':VISIBLE')
+        return ReportPage(self.driver)
+
 
     def into_mini_main_page(self):
         """
@@ -30,6 +33,6 @@ class MainPage(App):
             .find_and_click(MobileBy.XPATH, "//*[@text='小程序']") \
             .find_and_click(MobileBy.XPATH, "//*[@text='想家友邻']")
         sleep(2)
-        self.switch_context()
+        self.switch_context('WEBVIEW_com.tencent.mm:appbrand0')
         self.switch_windows(':VISIBLE')
         return self

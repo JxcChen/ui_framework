@@ -1,9 +1,0 @@
-******2022-08-05 22:57:26,107 - test - base_page.py,line 68 - INFO: 查找元素 by：id,locator:kw
-******2022-08-05 22:57:29,151 - test - handle_exception.py,line 39 - ERROR: 元素查找失败 by：id,locator：kw 进行错误处理 当前处理次数：1
-******2022-08-05 22:57:29,152 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[@resource-id='iv_close']") locator:None 第None个
-******2022-08-05 22:57:32,217 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='下一步']") locator:None 第None个
-******2022-08-05 22:57:35,253 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
-******2022-08-05 22:57:38,279 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='取消']") locator:None 第None个
-******2022-08-05 22:57:41,321 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='等待']") locator:None 第None个
-******2022-08-05 22:57:44,364 - test - base_page.py,line 114 - INFO: 查找全部相关元素 by：('xpath', "//*[text='我知道了']") locator:None 第None个
-******2022-08-05 22:57:47,402 - test - base_page.py,line 179 - INFO: 进行截图 name：2022-08-05 22:57:47 png_dir：./image

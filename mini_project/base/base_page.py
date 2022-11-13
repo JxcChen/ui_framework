@@ -7,6 +7,7 @@ import datetime
 import logging
 import os
 from logging import Logger
+from time import sleep
 
 import allure
 import yaml
@@ -61,7 +62,7 @@ class BasePage:
         self.driver = webdriver.Remote(f"{cap_conf['server']['host']}:{cap_conf['server']['port']}/wd/hub", self.caps)
 
     # @handle_exception
-    def find_element(self, by, locator: str = None) -> WebElement:
+    def find_element(self, by, locator: str = None):
         """
         查找元素
         :param by: 可以是元祖或者by对象
@@ -73,7 +74,7 @@ class BasePage:
             self._element = self.driver.find_element(*by)
         else:
             self._element = self.driver.find_element(by, locator)
-        return self._element
+        return self
 
     def click(self):
         """
@@ -203,6 +204,7 @@ class BasePage:
     # todo: app 双指操作
 
     def switch_windows(self, pattern: str):
+        sleep(2)
         for window in self.driver.window_handles:
             self.driver.switch_to.window(window)
             if pattern in self.driver.title:
