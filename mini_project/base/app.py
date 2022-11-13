@@ -64,4 +64,21 @@ class App(BasePage):
             contexts = self.driver.contexts
             self.driver.switch_to.context(contexts[-1])
 
+    def swap(self, direction: str):
+        """
+        滑动  需要制定滑动的方向
+        """
+        size = self.driver.get_window_size()
+        if str == 'up':
+            self.driver.swipe(start_x=size["width"] * 0.5, start_y=size["height"] * 0.9, end_x=size["width"] * 0.5,
+                              end_y=size["height"] * 0.6, duration=200)
+        elif direction == 'down':
+            self.driver.swipe(start_x=size["width"] * 0.5, start_y=size["height"] * 0.6, end_x=size["width"] * 0.5,
+                              end_y=size["height"] * 0.9, duration=200)
+        elif direction == 'left':
+            self.driver.swipe(start_x=size["width"] * 0.7, start_y=size["height"] * 0.5, end_x=size["width"] * 0.4,
+                              end_y=size["height"] * 0.5, duration=200)
+        elif direction == 'right':
+            self.driver.swipe(start_x=size["width"] * 0.4, start_y=size["height"] * 0.5, end_x=size["width"] * 0.7,
+                              end_y=size["height"] * 0.5, duration=200)
 

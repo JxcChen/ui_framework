@@ -9,7 +9,8 @@ from mini_project.page.main_page import MainPage
 
 class TestDemo:
     def setup_class(self):
-        self.main = MainPage().into_mini_main_page()
+        self.main = MainPage().init_mini_main_page()
 
     def test_report_home_repair(self):
         assert '提交成功' in self.main.into_report_page().report_home_repair().get_report_result()
+

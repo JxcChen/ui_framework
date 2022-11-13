@@ -8,7 +8,6 @@ from time import sleep
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.common.by import By
 
-
 from mini_project.base.app import App
 from mini_project.page.report_page import ReportPage
 
@@ -22,8 +21,7 @@ class MainPage(App):
         self.switch_windows(':VISIBLE')
         return ReportPage(self.driver)
 
-
-    def into_mini_main_page(self):
+    def init_mini_main_page(self):
         """
         进入小程序首页
         :return: 当前页面
@@ -35,4 +33,8 @@ class MainPage(App):
         sleep(2)
         self.switch_context('WEBVIEW_com.tencent.mm:appbrand0')
         self.switch_windows(':VISIBLE')
+        return self
+
+    def back_to_main_page(self):
+        self.back_to_main((By.CSS_SELECTOR, '.top_logo'))
         return self
