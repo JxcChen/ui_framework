@@ -12,9 +12,9 @@ capability:
     # 执行完后不停止app
 #    "dontStopAppOnReset": "true"
     # 驱动相关
-#    "chromedriverExecutable": "G:\\chromedriver\\chromedriver_86\\chromedriver.exe"
+    "chromedriverExecutable": "G:\\chromedriver\\chromedriver_86\\chromedriver.exe"
 #    "chromedriverExecutable": "/Users/chnjx/devApps/driver/all_driver/chromedriver_86"
-    "chromedriverExecutable": "D:\\GoogleDriver\\chromedriver_86.0.4240.exe"
+#    "chromedriverExecutable": "D:\\GoogleDriver\\chromedriver_86.0.4240.exe"
 
 #    "chromeOptions": { "androidProcess": "com.tencent.mm:appbrand0" }
     "recreateChromeDriverSessions": True

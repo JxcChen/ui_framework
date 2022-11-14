@@ -6,7 +6,7 @@
 import logging
 from logging import Logger
 
-from app_demo_project.base.logger_handler import LoggerHandler
+from mini_project.base.logger_handler import LoggerHandler
 
 
 class ProjectLogger:
@@ -22,7 +22,7 @@ class ProjectLogger:
     def __init__(self):
         if not self._flag:
             self._flag = True
-            self._logger = LoggerHandler.get_logger('test', 'mini_log', 'debug')
+            self._logger = LoggerHandler.getLogger('test', 'mini_log', 'debug')
 
     def get_logger(self) -> logging:
         return self._logger

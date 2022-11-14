@@ -6,6 +6,7 @@
 import datetime
 import logging
 import os
+from time import sleep
 
 import allure
 import yaml
@@ -201,6 +202,13 @@ class BasePage:
         """
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-    # ******************* app *************************
-    # todo: app 滑动
-    # todo: app 双指操作
+    def switch_windows(self, pattern: str):
+        """
+        切换页面
+        :param pattern: 对应页面中title存在元素
+        """
+        sleep(1)
+        for window in self.driver.window_handles:
+            self.driver.switch_to.window(window)
+            if pattern in self.driver.title:
+                break
