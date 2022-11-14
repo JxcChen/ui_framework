@@ -10,7 +10,7 @@ from mini_project.base.app import App
 
 home_repair = (By.LINK_TEXT, "居家维修")
 customer_service = (By.LINK_TEXT, "客户服务")
-question_input = (By.CSS_SELECTOR, "#content")
+question_input = (By.XPATH, "//*[@id='content']/div/textarea")
 commit_button = (MobileBy.XPATH, "//wx-button")
 result_text = (By.XPATH, "//wx-text[@class='title']/span[2]")
 go_home_button = (By.CSS_SELECTOR, 'wx-button')
@@ -20,10 +20,7 @@ class ReportPage(App):
 
     def report_home_repair(self):
         # 小程序要textarea才能进行输入操作
-        ele = self.driver.find_element(By.XPATH, "//*[@id='content']/div/textarea")
-        ele.send_keys("ceshiyixia")
-        self.find_and_click(commit_button)
-        self.switch_windows(':VISIBLE')
+        self.find_and_send("ceshiyixia", question_input).find_and_click(commit_button).switch_windows(':VISIBLE')
         return self
 
     def get_report_result(self) -> str:

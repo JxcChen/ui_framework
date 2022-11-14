@@ -10,9 +10,9 @@ import time
 
 import yaml
 
-from web_sa_4s_workorder.base.utils import Utils
-from web_sa_4s_workorder.base.web import Web
-from web_sa_4s_workorder.base import global_val
+from web_demo_project_bak.base.utils import Utils
+from web_demo_project_bak.base.web import Web
+from web_demo_project_bak.base import global_val
 
 
 class PageGenerate(Web):
