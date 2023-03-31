@@ -3,7 +3,7 @@
 # @Author   :CHNJX
 # @File     :project_logger.py
 # @Desc     :获取日志控制器  单例模式
-from web_sa_4s_workorder.base.logger_handler import LoggerHandler
+from web_demo_project_bak.base.logger_handler import LoggerHandler
 
 
 class ProjectLogger:

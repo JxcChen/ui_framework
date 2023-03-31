@@ -10,7 +10,7 @@ import os
 from jsonpath import jsonpath
 
 from web_demo_project_bak import project_logger
-from web_sa_4s_workorder.base.logger_handler import LoggerHandler
+from web_demo_project_bak.base.logger_handler import LoggerHandler
 
 
 class Utils:

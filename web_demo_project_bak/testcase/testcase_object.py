@@ -3,10 +3,10 @@
 # @Author   :CHNJX
 # @File     :testcase_object.py
 # @Desc     :测试用例的实体类
-
-from web_sa_4s_workorder.page.web_page_generate import PageGenerate
-from web_sa_4s_workorder.base import global_val
-from web_sa_4s_workorder.base.utils import Utils
+from web_demo_project_bak import project_logger
+from web_demo_project_bak.page.web_page_generate import PageGenerate
+from web_demo_project_bak.base import global_val
+from web_demo_project_bak.base.utils import Utils
 
 
 class Testcase:

@@ -15,8 +15,8 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from web_sa_4s_workorder.base.handle_exception import handle_exception
-from web_sa_4s_workorder.project_logger import ProjectLogger
+from web_demo_project_bak.base.handle_exception import handle_exception
+from web_demo_project_bak.project_logger import ProjectLogger
 
 
 class BasePage:
@@ -28,8 +28,8 @@ class BasePage:
 
     def __init__(self, driver: WebDriver = None):
         self.logger = ProjectLogger().get_logger()
-        from web_sa_4s_workorder.base.app import App
-        from web_sa_4s_workorder.base.web import Web
+        from web_demo_project_bak.base.app import App
+        from web_demo_project_bak.base.web import Web
         if driver is None:
             if self.__class__.__base__ is App:
                 self.init_app()

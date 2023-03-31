@@ -7,9 +7,9 @@ import os
 
 import yaml
 
-from web_sa_4s_workorder import project_logger
-from web_sa_4s_workorder.base import global_val
-from web_sa_4s_workorder.testcase.testcase_object import Testcase
+from web_demo_project_bak import project_logger
+from web_demo_project_bak.base import global_val
+from web_demo_project_bak.testcase.testcase_object import Testcase
 
 
 class TestcaseGenerate:

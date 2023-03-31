@@ -5,7 +5,7 @@
 # @Desc     :框架测试
 import pytest
 
-from web_sa_4s_workorder.page.main_page import MainPage
+from web_demo_project_bak.page.main_page import MainPage
 
 
 class TestDemo:
