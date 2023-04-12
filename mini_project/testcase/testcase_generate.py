@@ -8,6 +8,7 @@ import os
 import yaml
 
 from app_demo_project import project_logger
+from app_demo_project.base import global_val
 from web_sa_4s_workorder.testcase.testcase_object import Testcase
 
 

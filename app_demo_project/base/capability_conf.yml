@@ -4,9 +4,9 @@ capability:
     # 设备名称(随意填写)
     "deviceName": "HuaWeiP30"
     # 应用程序的包名
-    "appPackage": "com.xueqiu.android"
+    "appPackage": "com.tencent.mtt"
     # 应用程序的启动页面
-    "appActivity": ".view.WelcomeActivityAlias"
+    "appActivity": ".MainActivity"
     # 不重置app
     "noReset": "true"
     # 执行完后不停止app
